@@ -49,5 +49,12 @@
 - **Entregáveis:** Checkpoints práticos semanais
 - **Documentação:** Insights e dificuldades no Notion
 
+## 📚 Documentação
+
+- [Dia 1 - Setup Python](docs/01-dia1-setup-python.md)
+- [Dia 2 - Conceitos ML](docs/02-dia2-conceitos-ml.md)
+- [Dia 3 - Setup Node.js/TypeScript](docs/03-dia3-setup-nodejs.md)
+- [**🔧 Git - Guia Prático Completo**](docs/Git/README.md)
+
 ---
 *Conectado ao Sistema v2.0 e Plano de Vida Integrado*

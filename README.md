@@ -31,8 +31,25 @@
 - 🤖 ML: LinearRegression implementado e funcionando
 - 📚 Teoria: IA hierarchy, ML types, Ethics
 
-### 📋 **Semana 2:** Python Data Science + API REST
-*Em breve...*
+### 🟡 **Semana 2 (28 Out - 1 Nov):** Python Data Science + API REST - **EM PROGRESSO**
+**Docs:** [Dia 1](docs/04-dia1-semana2-eda.md) • [Visualizações](docs/05-referencia-visualizacoes.md) • [Correlação/Pipeline](docs/06-correlacao-e-pipeline-ml.md) • [Métricas](docs/07-metricas-ml-e-confiabilidade.md)
+
+**Dia 1 (28/10):** Análise Exploratória de Dados (EDA) ✅ **CONCLUÍDO**
+- [x] EDA completa com dataset Titanic (887 linhas)
+- [x] Limpeza e feature engineering (family_size, is_alone)
+- [x] Comparar modelos ML (Logistic Regression + Decision Tree)
+- [x] Métricas avançadas (accuracy: 79%, precision: 82%, recall: 64%, F1: 72%)
+- [x] **BÔNUS:** 4 documentos de referência criados!
+
+**Dia 2:** API REST Python (Flask/FastAPI)
+- [ ] Criar API com endpoints GET/POST
+- [ ] Integrar modelo ML treinado
+- [ ] Endpoint de predição com validação
+
+**Dia 3:** Integração Full Stack
+- [ ] NestJS consumindo API Python
+- [ ] React/Vite básico (bônus)
+
 ### 📋 **Semana 3:** ML Supervisionado + Dashboard React
 ### 📋 **Semana 4:** ML Não Supervisionado + Integração
 ### 📋 **Semana 5:** Deep Learning + Frontend Avançado
@@ -58,9 +75,9 @@
 
 ### 📈 **Progresso Geral**
 ```
-█████████░ 90% Semana 1 - CONCLUÍDA (3 dias produtivos)
-░░░░░░░░░░  0% Semana 2 - Pendente
-░░░░░░░░░░  0% Semana 3 - Pendente
+██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
+███░░░░░░░  33% Semana 2 - EM PROGRESSO 🟡 (Dia 1 concluído)
+░░░░░░░░░░   0% Semana 3 - Pendente
 ```
 
 **Métricas Semana 1:**
@@ -68,6 +85,13 @@
 - 📝 **Documentação:** 3 relatórios completos (~3.500 palavras)
 - 🎯 **Objetivos:** 100% concluídos + bônus (ML model)
 - 💪 **Nível:** Iniciante → Intermediário iniciante
+
+**Métricas Semana 2 (Parcial):**
+- ⏱️ **Tempo investido:** ~3-4h (Dia 1)
+- 📝 **Documentação:** 4 guias de referência (~8.000 palavras)
+- 🎯 **Objetivos Dia 1:** 100% concluídos
+- 🤖 **ML:** 79% accuracy (acima da média Kaggle!)
+- 💪 **Nível:** Intermediário → Intermediário avançado
 
 **Meta Semanal:**
 - **Blocos protegidos:** 2-3 sessões/semana

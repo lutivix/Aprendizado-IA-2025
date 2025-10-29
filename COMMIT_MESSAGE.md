@@ -1,58 +1,59 @@
-# Main - feat(week2-day1): Complete EDA with Titanic dataset
+# Main - feat(week2-day2): Complete REST API with FastAPI
 
-## 📊 Análise Exploratória de Dados Completa
+## � API REST Python Completa
 
 ### Implementações Principais
-- **Dataset**: 887 passageiros do Titanic (Stanford repository)
-- **Visualizações**: 5 gráficos profissionais criados
-  - Taxa de sobrevivência geral
-  - Correlações entre features
-  - Distribuições por classe e gênero
-  - Boxplots de idade e tarifa
-  - Heatmap de correlação
+- **Framework**: FastAPI 0.115.0 + Uvicorn 0.32.0
+- **Modelo ML**: LogisticRegression (75.28% accuracy)
+- **Endpoints**: 4 rotas funcionais
+- **Validação**: Pydantic com type hints
+- **Documentação**: Swagger/ReDoc automática
+- **CORS**: Configurado para integração
+- **Testes**: 6 testes automatizados (100% sucesso)
 
-### 🔧 Feature Engineering
-- `family_size`: Tamanho da família (SibSp + Parch + 1)
-- `is_alone`: Indicador binário de viajante solo
-- `sex_numeric`: Conversão de gênero para valores numéricos
+### � Arquivos Criados (~707 linhas Python)
 
-### 🤖 Modelos de Machine Learning
-- **LogisticRegression**: 79% de acurácia
-- **DecisionTreeClassifier**: Modelo comparativo
-- **Métricas Calculadas**:
-  - Accuracy: 79%
-  - Precision: 82%
-  - Recall: 64%
-  - F1-Score: 72%
+1. **python-api/app.py** (247 linhas) - API FastAPI completa
+2. **python-api/train_and_save_model.py** (180 linhas) - Script de treinamento
+3. **python-api/test_api.py** (280 linhas) - Suite de testes completa
+4. **python-api/requirements.txt** - Dependências
+5. **python-api/README.md** - Documentação completa
+6. **python-api/.gitignore** - Arquivos ignorados
+7. **python-api/model.pkl** (3.2 KB) - Modelo treinado
+8. **python-api/model_metadata.json** - Metadados
 
-### 📚 Documentação Criada (~15,000 palavras)
-1. **05-referencia-visualizacoes.md**
-   - Guia completo de visualizações
-   - Matplotlib e Seaborn
-   - Quando usar cada tipo de gráfico
+### 🔌 Endpoints Implementados
 
-2. **06-correlacao-e-pipeline-ml.md**
-   - Pipeline de ML em 11 etapas
-   - Interpretação de correlações
-   - Seleção de features
+1. **GET /** - Health Check (status online)
+2. **GET /model/info** - Informações do modelo
+3. **POST /predict** - Predição individual (96.15% mulher 1ª classe)
+4. **POST /predict/batch** - Predição em lote
 
-3. **07-metricas-ml-e-confiabilidade.md**
-   - Explicação detalhada de métricas
-   - Matriz de confusão
-   - Análise de confiabilidade do modelo
+### 🧪 Testes: 6/6 Passaram (100%)
 
-4. **04-dia1-semana2-eda.md**
-   - Guia do Dia 1
-   - Conceitos fundamentais
-   - Exercícios práticos
+- ✅ Health Check
+- ✅ Model Info
+- ✅ Predição Alta Chance (mulher 1ª classe)
+- ✅ Predição Baixa Chance (homem 3ª classe)
+- ✅ Predição em Lote
+- ✅ Validação de Entrada (erro 422)
+
+### 📚 Documentação Criada
+
+**docs/08-dia2-semana2-api-rest.md** (~5.000 palavras)
+- Guia completo da API
+- Conceitos FastAPI vs NestJS
+- Fluxo de execução detalhado
+- Boas práticas implementadas
 
 ### 📈 Progresso do Projeto
-- Semana 2: 33% completa (Dia 1/3)
-- Performance do modelo acima da média Kaggle
-- Feature importance: sex_numeric (45%) > pclass (25%) > fare (15%)
+- Semana 2: **67% completa** (2/3 dias)
+- Código total: **~1.507 linhas**
+- Documentação: **~20.000 palavras**
+- APIs: **4 endpoints** funcionais
 
 ### ✅ Resultados Validados
-- Modelo atingiu 79% de acurácia (93% do limite teórico de ~85%)
-- Todas as células do notebook executadas com sucesso
-- Código modernizado (sem `inplace=True`)
-- Tratamento de erros implementado (fallback URLs)
+- API rodando em http://localhost:8000
+- Swagger UI em /docs funcionando
+- Modelo ML integrado (75% accuracy)
+- Todos os testes passando

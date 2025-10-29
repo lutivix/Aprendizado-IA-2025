@@ -1,0 +1,21 @@
+{
+  "model_type": "LogisticRegression",
+  "features": [
+    "Pclass",
+    "sex_numeric",
+    "Age",
+    "family_size",
+    "is_alone",
+    "Fare"
+  ],
+  "accuracy": 0.7528089887640449,
+  "feature_descriptions": {
+    "Pclass": "Classe do passageiro (1, 2 ou 3)",
+    "sex_numeric": "Gênero (0=feminino, 1=masculino)",
+    "Age": "Idade em anos",
+    "family_size": "Tamanho da família (incluindo passageiro)",
+    "is_alone": "Viajando sozinho (0=não, 1=sim)",
+    "Fare": "Tarifa paga"
+  },
+  "training_date": "2025-10-29"
+}

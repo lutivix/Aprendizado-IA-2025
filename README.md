@@ -31,24 +31,16 @@
 - 🤖 ML: LinearRegression implementado e funcionando
 - 📚 Teoria: IA hierarchy, ML types, Ethics
 
-### 🟡 **Semana 2 (28 Out - 1 Nov):** Python Data Science + API REST - **EM PROGRESSO**
-**Docs:** [Dia 1](docs/04-dia1-semana2-eda.md) • [Visualizações](docs/05-referencia-visualizacoes.md) • [Correlação/Pipeline](docs/06-correlacao-e-pipeline-ml.md) • [Métricas](docs/07-metricas-ml-e-confiabilidade.md)
-
-**Dia 1 (28/10):** Análise Exploratória de Dados (EDA) ✅ **CONCLUÍDO**
-- [x] EDA completa com dataset Titanic (887 linhas)
-- [x] Limpeza e feature engineering (family_size, is_alone)
-- [x] Comparar modelos ML (Logistic Regression + Decision Tree)
-- [x] Métricas avançadas (accuracy: 79%, precision: 82%, recall: 64%, F1: 72%)
-- [x] **BÔNUS:** 4 documentos de referência criados!
-
-**Dia 2:** API REST Python (Flask/FastAPI)
-- [ ] Criar API com endpoints GET/POST
-- [ ] Integrar modelo ML treinado
-- [ ] Endpoint de predição com validação
-
-**Dia 3:** Integração Full Stack
-- [ ] NestJS consumindo API Python
-- [ ] React/Vite básico (bônus)
+### 🎯 Conquistas da Semana 2:
+- ✅ **Dia 1 completo:** EDA Titanic + 2 modelos ML (79% accuracy)
+- ✅ **Dia 2 completo:** API REST FastAPI + modelo ML (75% accuracy)
+- ✅ 5 visualizações profissionais criadas
+- ✅ Feature engineering implementado
+- ✅ 4 endpoints REST funcionando (GET + POST)
+- ✅ 6 testes automatizados (100% sucesso)
+- ✅ 5 documentos de referência (~20.000 palavras)
+- ✅ ~1.507 linhas de código (Python)
+- 🟡 **Próximo:** Integração Full Stack (Python + NestJS)
 
 ### 📋 **Semana 3:** ML Supervisionado + Dashboard React
 ### 📋 **Semana 4:** ML Não Supervisionado + Integração

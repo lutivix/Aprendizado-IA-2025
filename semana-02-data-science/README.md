@@ -1,8 +1,8 @@
 # 📅 Semana 2: Python Data Science + API REST
 
 **Período:** 28 Out - 1 Nov 2025  
-**Status:** 🟡 **EM PROGRESSO**  
-**Tempo total:** _A registrar_
+**Status:** 🟡 **EM PROGRESSO** (67% - 2/3 dias)  
+**Tempo total:** ~8 horas
 
 ---
 
@@ -15,11 +15,15 @@
 - [x] Métricas avançadas (accuracy, precision, recall, F1)
 - [x] **Resultado:** 79% accuracy (acima da média Kaggle!)
 
-### Dia 2: API REST Python (Flask/FastAPI)
-- [ ] Criar API Python básica
-- [ ] Endpoints GET/POST funcionando
-- [ ] Integrar modelo ML na API
-- [ ] Endpoint de predição com validação
+### Dia 2: API REST Python (FastAPI) ✅ CONCLUÍDO
+- [x] Criar API Python com FastAPI
+- [x] 4 Endpoints GET/POST funcionando
+- [x] Integrar modelo ML na API (75% accuracy)
+- [x] Validação com Pydantic
+- [x] Documentação automática (Swagger/ReDoc)
+- [x] CORS configurado
+- [x] 6 Testes automatizados (100% sucesso)
+- [x] **Resultado:** ~707 linhas de código Python, API funcional!
 
 ### Dia 3: Integração Full Stack
 - [ ] NestJS consumindo API Python
@@ -84,7 +88,8 @@ semana-02-data-science/
 
 - [x] Notebook EDA completo com insights ✅
 - [x] Modelo ML com métricas documentadas ✅
-- [ ] API Python funcionando (Dia 2)
+- [x] API Python funcionando (Dia 2) ✅
+- [x] 6 testes automatizados (100% sucesso) ✅
 - [ ] Sistema integrado (Python + NestJS) (Dia 3)
 
 ---

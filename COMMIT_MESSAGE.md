@@ -1,53 +1,80 @@
-# Main - feat(week2-day2): Complete REST API with FastAPI
+# Main - feat(semana-02): Completa Dia 3 - Integração Full Stack (React + NestJS + Python)
 
-## � API REST Python Completa
+## 🚀 Sistema Full Stack Completo
 
-### Implementações Principais
-- **Framework**: FastAPI 0.115.0 + Uvicorn 0.32.0
-- **Modelo ML**: LogisticRegression (75.28% accuracy)
-- **Endpoints**: 4 rotas funcionais
-- **Validação**: Pydantic com type hints
-- **Documentação**: Swagger/ReDoc automática
-- **CORS**: Configurado para integração
-- **Testes**: 6 testes automatizados (100% sucesso)
+### ✨ Features Principais
+- **Frontend**: React 18 + TypeScript + Vite 4 (Node 18 compatible)
+- **Backend Proxy**: NestJS 10 com 4 endpoints REST
+- **ML API**: FastAPI integrada (do Dia 2)
+- **Integração**: React → NestJS → FastAPI → ML Model
+- **Interface**: Responsiva com toggle direto/proxy
+- **Design**: Gradiente moderno com animações
 
-### � Arquivos Criados (~707 linhas Python)
+### 📁 Arquivos Criados
 
-1. **python-api/app.py** (247 linhas) - API FastAPI completa
-2. **python-api/train_and_save_model.py** (180 linhas) - Script de treinamento
-3. **python-api/test_api.py** (280 linhas) - Suite de testes completa
-4. **python-api/requirements.txt** - Dependências
-5. **python-api/README.md** - Documentação completa
-6. **python-api/.gitignore** - Arquivos ignorados
-7. **python-api/model.pkl** (3.2 KB) - Modelo treinado
-8. **python-api/model_metadata.json** - Metadados
+#### React Frontend (5173)
+1. **react-vite-app/src/components/TitanicPredictor.tsx** - Componente principal
+2. **react-vite-app/src/components/TitanicPredictor.css** - Estilos
+3. **react-vite-app/src/App.tsx** - App atualizado
+4. **react-vite-app/package.json** - Dependências (Vite 4)
 
-### 🔌 Endpoints Implementados
+#### NestJS Backend (3001)
+1. **nestjs-client/src/titanic/titanic.controller.ts** - 4 endpoints REST
+2. **nestjs-client/src/titanic/titanic.service.ts** - Lógica de integração
+3. **nestjs-client/src/titanic/titanic.module.ts** - Configuração módulo
+4. **nestjs-client/src/titanic/titanic.dto.ts** - Data Transfer Objects
+5. **nestjs-client/src/main.ts** - Entry point com CORS
 
-1. **GET /** - Health Check (status online)
-2. **GET /model/info** - Informações do modelo
-3. **POST /predict** - Predição individual (96.15% mulher 1ª classe)
-4. **POST /predict/batch** - Predição em lote
+### 🔌 Arquitetura Full Stack
 
-### 🧪 Testes: 6/6 Passaram (100%)
+```
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│   React     │─────▶│   NestJS    │─────▶│   FastAPI   │─────▶│  ML Model   │
+│   (5173)    │ HTTP │   (3001)    │ HTTP │   (8000)    │      │ (model.pkl) │
+└─────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
+```
 
-- ✅ Health Check
-- ✅ Model Info
-- ✅ Predição Alta Chance (mulher 1ª classe)
-- ✅ Predição Baixa Chance (homem 3ª classe)
-- ✅ Predição em Lote
-- ✅ Validação de Entrada (erro 422)
+### 🐛 Problemas Resolvidos
+
+1. **Node 18 Compatibility**: Vite 4 ao invés de 5
+2. **Windows Python**: Comando `py` ao invés de `python`
+3. **IPv6/IPv4**: `127.0.0.1` ao invés de `localhost` (ECONNREFUSED ::1:8000)
+4. **CORS**: Configurado em NestJS e FastAPI
 
 ### 📚 Documentação Criada
 
-**docs/08-dia2-semana2-api-rest.md** (~5.000 palavras)
-- Guia completo da API
-- Conceitos FastAPI vs NestJS
-- Fluxo de execução detalhado
-- Boas práticas implementadas
+1. **docs/09-dia3-integracao-fullstack.md** (~5.000 palavras)
+   - Arquitetura completa
+   - Fluxo de dados end-to-end
+   - Problemas e soluções
+   - Guia de integração
 
-### 📈 Progresso do Projeto
-- Semana 2: **67% completa** (2/3 dias)
+2. **docs/10-revisao-tempo-extra.md** (guia de revisão)
+   - Exercícios rápidos (5, 15, 30 min)
+   - Conceitos-chave
+   - Checklist de revisão
+
+3. **semana-02-data-science/INICIAR-SISTEMA.md**
+   - Guia de inicialização dos 3 serviços
+   - Comandos de teste
+   - Troubleshooting
+
+### � Progresso do Projeto
+
+- ✅ Semana 2 Dia 1: EDA + ML (79% accuracy)
+- ✅ Semana 2 Dia 2: FastAPI REST API (75% accuracy)
+- ✅ Semana 2 Dia 3: Full Stack Integration
+- 🎉 **Semana 2: 100% COMPLETA!**
+
+### 🎯 Resultado Final
+
+Sistema Full Stack funcional end-to-end:
+- Interface web moderna e responsiva
+- Predições em tempo real
+- 2 modos: direto (React→Python) e proxy (React→NestJS→Python)
+- Tratamento de erros em todas camadas
+- 75.28% accuracy nas predições
+
 - Código total: **~1.507 linhas**
 - Documentação: **~20.000 palavras**
 - APIs: **4 endpoints** funcionais

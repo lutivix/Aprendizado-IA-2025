@@ -98,10 +98,34 @@ semana-01-fundamentos/
 
 ## 📝 Notas e Insights
 
-### 21/10 - Início ✅
+### 21/10 - Dia 1: Setup Python ✅
 - ✅ Estrutura criada em D:\Professional\Projetos\Github\Aprendizado-IA-2025
 - ✅ Integração com Sistema v2.0 planejada
 - ✅ Setup Python concluído no buffer dinâmico (2h20min)
+- ✅ Anaconda 25.5.1 + Python 3.13.5 instalados
+- ✅ Jupyter Lab 4.3.4 funcionando (VS Code + Browser)
+- ✅ Bibliotecas essenciais: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
+- ✅ Primeiro notebook criado com sucesso
+
+### 22/10 - Dia 2: Fundamentos IA/ML/DL ✅
+- ✅ Conceitos fundamentais documentados (1h20min)
+- ✅ Diagrama hierárquico IA → ML → Deep Learning criado (PNG)
+- ✅ Tipos de aprendizado com exemplos práticos
+- ✅ Ética em IA: viés, transparência, privacidade
+- ✅ **Primeiro modelo ML implementado!** LinearRegression com R² 96.5%
+- ✅ Compreensão de treino, predição e avaliação de modelos
+- ✅ Notebook 02-fundamentos-teoria-ml.ipynb completado
+- ✅ Documentação: docs/02-dia2-conceitos-ml.md (~1.200 palavras)
+
+### 24/10 - Dia 3: Setup Node.js/TypeScript/NestJS ✅
+- ✅ Node.js v18.20.7 + NPM 10.8.2 instalados (1h30min)
+- ✅ TypeScript 5.9.3 configurado (via npx)
+- ✅ NestJS CLI 10.4.9 funcionando
+- ✅ Hello World API REST rodando em localhost:3000
+- ✅ Troubleshooting npm/PATH resolvido
+- ✅ Conflito TypeScript Microsoft SDK contornado
+- ✅ Projeto hello-world-api criado e testado
+- ✅ Documentação: docs/03-dia3-setup-nodejs.md (~1.100 palavras)
 
 ### Dificuldades Encontradas ✅
 - **Jupyter F10:** Debugging inconsistente → Solução: ler resultados das células

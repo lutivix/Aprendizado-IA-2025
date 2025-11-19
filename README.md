@@ -2,8 +2,9 @@
 
 ## 📋 Contexto e Metodologia
 
-**Período:** Outubro 2025 - Janeiro 2026 (10 semanas)  
+**Período:** Outubro 2025 - Fevereiro 2026 (12-14 semanas)  
 **Metodologia:** 60% prática + 40% teoria com GitHub Copilot  
+**Ritmo:** 2 dias/semana (Qua/Sex) com flexibilidade para 3 dias quando possível  
 **Horários protegidos:** Qua/Sex manhã + Ter buffer dinâmico  
 
 ## 🎯 Objetivos Integrados
@@ -83,7 +84,7 @@ Aprendizado-IA-2025/
 
 ---
 
-## �📅 Cronograma (10 Semanas)
+## 📅 Cronograma (12-14 Semanas) - Ajustado para 2 dias/semana
 
 ### ✅ **Semana 1 (21-24 Out):** Fundamentos + Setup - **CONCLUÍDA** 🎉
 **Tempo:** 5h10min | **Docs:** [Dia 1](docs/01-dia1-setup-python.md) • [Dia 2](docs/02-dia2-conceitos-ml.md) • [Dia 3](docs/03-dia3-setup-nodejs.md)
@@ -149,13 +150,79 @@ Aprendizado-IA-2025/
 - ✅ TESTE-VALIDACAO.md com testes do Dia 1 e Dia 2
 - 📚 ~2.500 linhas de código Python
 - 📝 ~5.000 palavras de documentação
-### 📋 **Semana 4:** ML Não Supervisionado + Integração
-### 📋 **Semana 5:** Deep Learning + Frontend Avançado
-### 📋 **Semana 6:** NLP + Chatbots
-### 📋 **Semana 7:** Computer Vision + Deploy
-### 📋 **Semana 8:** Agente IA Financeiro
-### 📋 **Semana 9:** Agente IA Saúde
-### 📋 **Semana 10:** Integração + Produção
+
+### 📋 **Semana 4:** Consolidação ML + Projeto Prático
+**Foco:** Respirar, revisar conceitos nebulosos, projeto simples aplicado
+
+- [ ] Revisão: quando usar cada algoritmo ML
+- [ ] Revisão: feature engineering na prática
+- [ ] Projeto prático: modelo simples para gestão financeira
+- [ ] Consolidação de boas práticas
+- [ ] Documentação de aprendizados-chave
+
+**💡 Objetivo:** Solidificar conhecimento antes de avançar
+
+### 📋 **Semana 5-6:** ML Não Supervisionado + Clustering
+**Foco:** Técnicas úteis para segmentação e detecção
+
+- [ ] K-Means, DBSCAN, Hierarchical Clustering
+- [ ] Anomaly Detection (útil para fraudes/estoque)
+- [ ] PCA e redução de dimensionalidade (aprofundar)
+- [ ] Projeto: segmentação de clientes ou análise de estoque
+- [ ] Integração com pipeline de dados
+
+**💡 Aplicação:** Segmentação, detecção de padrões anormais
+
+### 📋 **Semana 7-8:** Séries Temporais + Forecasting
+**Foco:** Previsão essencial para gestão financeira e estoque
+
+- [ ] Time Series basics (tendência, sazonalidade)
+- [ ] ARIMA, Prophet, modelos de forecasting
+- [ ] Previsão de vendas e demanda
+- [ ] Análise de séries financeiras
+- [ ] Projeto: previsão para gestão de estoque
+
+**💡 Aplicação:** Previsão de vendas, planejamento de estoque
+
+### 📋 **Semana 9-10:** NLP Básico + Processamento de Texto
+**Foco:** Trabalhar com texto, chatbots simples
+
+- [ ] Tokenização, embedding, TF-IDF
+- [ ] Sentiment analysis básico
+- [ ] Chatbot simples (regras + ML)
+- [ ] Processamento de notas fiscais/descrições
+- [ ] Projeto: assistente para consultas de dados
+
+**💡 Aplicação:** Chatbots, processamento de documentos
+
+### 📋 **Semana 11-12:** Agente IA Financeiro (Projeto Real)
+**Foco:** Aplicar tudo no projeto de gestão financeira
+
+- [ ] Análise de requisitos do projeto
+- [ ] Feature engineering com dados reais
+- [ ] Modelos de previsão financeira
+- [ ] Dashboard de visualização
+- [ ] Deploy básico e testes
+
+**💡 Aplicação:** Seu projeto real de gestão financeira
+
+### 📋 **Semana 13-14:** Agente IA Estoque + Integração Final
+**Foco:** Segundo projeto real + integração com sistemas
+
+- [ ] Sistema de previsão de demanda
+- [ ] Detecção de anomalias em estoque
+- [ ] Integração com sistemas existentes
+- [ ] Automação de processos
+- [ ] Documentação completa
+
+**💡 Aplicação:** Seu projeto real de gerenciamento de estoque
+
+### 🎯 **Tópicos Avançados (Opcional/Futuro)**
+Conforme necessidade dos projetos:
+- Deep Learning (Redes Neurais complexas)
+- Computer Vision
+- Reinforcement Learning
+- Deploy em produção avançado
 
 ## 🛡️ Protocolo v2.0 Integrado
 
@@ -176,6 +243,12 @@ Aprendizado-IA-2025/
 ██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████▋░░░  67% Semana 3 - EM PROGRESSO 🔄 (2/3 dias concluídos)
+░░░░░░░░░░   0% Semana 4 - Consolidação ML
+░░░░░░░░░░   0% Semana 5-6 - ML Não Supervisionado
+░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
+░░░░░░░░░░   0% Semana 9-10 - NLP Básico
+░░░░░░░░░░   0% Semana 11-12 - Projeto Financeiro
+░░░░░░░░░░   0% Semana 13-14 - Projeto Estoque
 ```
 
 **Métricas Semana 1:**

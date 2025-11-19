@@ -175,7 +175,7 @@ Aprendizado-IA-2025/
 ```
 ██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
-█░░░░░░░░░  10% Semana 3 - EM PROGRESSO 🔄 (estrutura criada)
+██████▋░░░  67% Semana 3 - EM PROGRESSO 🔄 (2/3 dias concluídos)
 ```
 
 **Métricas Semana 1:**
@@ -193,11 +193,14 @@ Aprendizado-IA-2025/
 - 💪 **Nível:** Intermediário → Intermediário avançado
 
 **Métricas Semana 3 (Em andamento):**
-- ⏱️ **Tempo investido:** ~0.5h (setup + estrutura)
-- 📝 **Documentação:** 2 documentos criados (~8.000 palavras)
-- 🎯 **Objetivos Dia 1:** 20% (estrutura + feature engineering)
-- 🤖 **ML Avançado:** Setup inicial completo
-- 💪 **Meta:** Ensemble methods + 85% accuracy
+- ⏱️ **Tempo investido:** ~6h (Dia 1 + Dia 2 completos)
+- 📝 **Documentação:** 6 documentos (~15.000 palavras)
+- 🎯 **Objetivos:** 67% concluídos (Dia 1 ✅ + Dia 2 ✅)
+- 🤖 **ML Avançado:** 4 modelos otimizados (RF, XGBoost, SVM, MLP)
+- 📊 **Melhor resultado:** 85.1% accuracy (XGBoost)
+- 🎛️ **Hyperparameter Tuning:** Grid/Random Search + CV implementados
+- 📚 **Código:** ~2.500 linhas Python (2 notebooks completos)
+- 💪 **Nível:** Intermediário avançado → Avançado iniciante
 
 **Meta Semanal:**
 - **Blocos protegidos:** 2-3 sessões/semana

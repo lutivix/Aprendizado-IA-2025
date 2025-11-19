@@ -118,23 +118,37 @@ Aprendizado-IA-2025/
 - 📝 5 documentos de referência (~20.000 palavras)
 - 💻 ~1.507 linhas de código Python
 
-### 🔄 **Semana 3 (4-8 Nov):** ML Supervisionado Avançado - **EM PROGRESSO**
-**Tempo:** ~0.5h | **Docs:** [Dia 1](docs/11-dia1-semana3-ml-supervisionado.md)
+### 🔄 **Semana 3 (4-19 Nov):** ML Supervisionado Avançado - **EM PROGRESSO**
+**Tempo:** ~6h | **Docs:** [Dia 1](docs/11-dia1-semana3-ml-supervisionado.md) • [Dia 2](docs/15-dia2-semana3-hyperparameter-tuning.md) • [Material Lúdico](docs/14-arvores-decisao-explicacao-ludica.md)
 
-**Dia 1:** ML Supervisionado Avançado 🔄 EM ANDAMENTO
+**Dia 1:** ML Supervisionado Avançado ✅ CONCLUÍDO
 - [x] Estrutura completa criada (README + Docs + Notebook)
 - [x] Feature engineering avançado implementado
-- [x] Dataset preparado
-- [x] Random Forest, XGBoost, SVM, Neural Networks
-- [ ] Comparação estatística de modelos
-- [ ] Visualizações interativas
-- **Meta:** >85% accuracy com ensemble methods
+- [x] Dataset preparado e modelos treinados
+- [x] Random Forest, XGBoost, SVM, Neural Networks implementados
+- [x] Comparação estatística de modelos (4 algoritmos)
+- [x] Visualizações e feature importance
+- **Resultado:** 85.1% accuracy com XGBoost
 
-**📊 Progresso:**
-- ✅ Estrutura da semana criada
-- ✅ Documentação técnica completa
-- ✅ Notebook com 13 seções estruturadas
-- 🔄 Instalando dependências (XGBoost, LightGBM)
+**Dia 2:** Hyperparameter Tuning + Cross-Validation ✅ CONCLUÍDO
+- [x] Grid Search e Random Search implementados
+- [x] Cross-Validation (K-Fold e Stratified K-Fold)
+- [x] Learning Curves para diagnóstico
+- [x] Pipeline ML completo (preprocessamento + modelo)
+- [x] Feature Selection (SelectKBest, RFE)
+- [x] PCA para redução de dimensionalidade
+- [x] Documentação lúdica com exemplos práticos
+- **Resultado:** Otimização bem-sucedida de 4 modelos
+
+**📊 Conquistas:**
+- ✅ 2 notebooks completos (40+ células cada)
+- ✅ 4 modelos otimizados com Grid/Random Search
+- ✅ Documentação técnica (15-dia2-semana3-hyperparameter-tuning.md)
+- ✅ Material lúdico (14-arvores-decisao-explicacao-ludica.md)
+- ✅ AUTOAVALIACAO.md atualizado com Semana 3
+- ✅ TESTE-VALIDACAO.md com testes do Dia 1 e Dia 2
+- 📚 ~2.500 linhas de código Python
+- 📝 ~5.000 palavras de documentação
 ### 📋 **Semana 4:** ML Não Supervisionado + Integração
 ### 📋 **Semana 5:** Deep Learning + Frontend Avançado
 ### 📋 **Semana 6:** NLP + Chatbots

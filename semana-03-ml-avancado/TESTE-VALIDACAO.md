@@ -1490,6 +1490,857 @@ Se você chegou até aqui, executou tudo, e entende os conceitos quando lê as e
 
 ---
 
-**Sucesso na sua jornada! 🚀**
+# 📅 DIA 3: Dashboard React + API FastAPI
 
-_Este teste pode ser refeito quantas vezes quiser. Use-o como ferramenta de aprendizado, não como prova!_
+## ⏱️ Tempo estimado: 30 minutos
+
+---
+
+## 📋 Parte 1: Conceitos Fundamentais (múltipla escolha)
+
+### Questão 1: REST API Basics
+Qual método HTTP você usaria para fazer uma predição enviando dados de um passageiro para a API?
+
+**A)** GET  
+**B)** POST  
+**C)** PUT  
+**D)** DELETE  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) POST**
+
+**Por quê:**
+- **GET:** Apenas buscar dados, sem enviar corpo (body)
+- **POST:** Enviar dados no corpo da requisição ✅
+- **PUT:** Atualizar recurso existente
+- **DELETE:** Remover recurso
+
+**Conceito-chave:** POST é usado quando você envia dados para o servidor processar e retornar um resultado.
+
+**Exemplo prático:**
+```python
+# ❌ ERRADO - GET não tem body
+response = requests.get('http://localhost:8000/predict', 
+                        data={'age': 22})
+
+# ✅ CERTO - POST envia dados no body
+response = requests.post('http://localhost:8000/predict',
+                         json={'pclass': 3, 'age': 22, ...})
+```
+</details>
+
+---
+
+### Questão 2: CORS (Cross-Origin Resource Sharing)
+Seu React está em `localhost:5173` e a API em `localhost:8000`. Você recebe erro "CORS policy blocked". O que fazer?
+
+**A)** Desabilitar CORS no navegador  
+**B)** Configurar CORS na API FastAPI  
+**C)** Mudar a porta do React  
+**D)** Usar HTTPS  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) Configurar CORS na API FastAPI**
+
+**Por quê:**
+- Frontend (5173) e Backend (8000) são origens diferentes
+- Navegador bloqueia por segurança
+- Solução: API deve permitir explicitamente
+
+**Código correto (FastAPI):**
+```python
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+
+**Conceito-chave:** CORS é configurado no SERVIDOR (backend), não no cliente.
+</details>
+
+---
+
+### Questão 3: Pydantic Validation
+Na API, você definiu:
+```python
+class PassengerInput(BaseModel):
+    age: float = Field(..., ge=0, le=100)
+```
+
+O que acontece se enviar `age: -5`?
+
+**A)** API retorna predição com age=-5  
+**B)** FastAPI retorna erro 422 (Validation Error)  
+**C)** Python lança ValueError  
+**D)** Pydantic ajusta para 0  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) FastAPI retorna erro 422 (Validation Error)**
+
+**Por quê:**
+- `ge=0` significa "greater or equal" (≥ 0)
+- Pydantic valida ANTES de processar
+- FastAPI retorna automaticamente status 422
+
+**Resposta da API:**
+```json
+{
+  "detail": [
+    {
+      "loc": ["body", "age"],
+      "msg": "ensure this value is greater than or equal to 0",
+      "type": "value_error.number.not_ge"
+    }
+  ]
+}
+```
+
+**Conceito-chave:** Pydantic faz validação automática, sem precisar de if/else manual.
+</details>
+
+---
+
+### Questão 4: React Hooks - useState
+Você tem:
+```tsx
+const [prediction, setPrediction] = useState<PredictionResponse | null>(null)
+```
+
+Quando você deve chamar `setPrediction()`?
+
+**A)** Imediatamente após o componente renderizar  
+**B)** Depois de receber a resposta da API  
+**C)** Antes de enviar a requisição  
+**D)** No evento onClick do botão  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) Depois de receber a resposta da API**
+
+**Por quê:**
+- Estado só muda quando temos dados novos
+- Aguardamos resposta assíncrona
+- Só então atualizamos UI
+
+**Fluxo correto:**
+```tsx
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault()
+  setLoading(true)  // Antes: mostra loading
+  
+  try {
+    const response = await axios.post('/predict', data)
+    setPrediction(response.data)  // ✅ Depois: atualiza estado
+  } catch (error) {
+    // Tratar erro
+  } finally {
+    setLoading(false)  // Sempre: remove loading
+  }
+}
+```
+
+**Conceito-chave:** Estado muda DEPOIS de receber dados, não antes ou durante.
+</details>
+
+---
+
+### Questão 5: useEffect Dependencies
+Você quer carregar informações do modelo quando o componente montar. Qual é o correto?
+
+**A)** `useEffect(() => { fetchData() })`  
+**B)** `useEffect(() => { fetchData() }, [])`  
+**C)** `useEffect(() => { fetchData() }, [fetchData])`  
+**D)** `useEffect(fetchData, [])`  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) `useEffect(() => { fetchData() }, [])`**
+
+**Por quê:**
+- `[]` vazio = executa APENAS na montagem
+- Sem `[]` = executa a cada render (❌ loop infinito!)
+- `[fetchData]` = desnecessário se fetchData não muda
+
+**Código completo:**
+```tsx
+useEffect(() => {
+  const fetchModelInfo = async () => {
+    const response = await axios.get('/model/info')
+    setMetadata(response.data)
+  }
+  
+  fetchModelInfo()
+}, [])  // ✅ Array vazio = roda uma vez
+```
+
+**Conceito-chave:** Array de dependências controla QUANDO o effect executa.
+</details>
+
+---
+
+### Questão 6: Axios vs Fetch
+Qual a principal vantagem do Axios sobre o Fetch nativo?
+
+**A)** Axios é mais rápido  
+**B)** Axios transforma JSON automaticamente  
+**C)** Axios usa menos memória  
+**D)** Axios funciona apenas no React  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) Axios transforma JSON automaticamente**
+
+**Comparação:**
+```tsx
+// ❌ FETCH - Precisa de .json()
+const response = await fetch('/model/info')
+const data = await response.json()  // Passo extra!
+
+// ✅ AXIOS - Já retorna objeto
+const response = await axios.get('/model/info')
+const data = response.data  // Direto!
+```
+
+**Outras vantagens do Axios:**
+- Interceptors (modificar requisições)
+- Timeout automático
+- Cancelamento de requisições
+- Melhor tratamento de erros
+
+**Conceito-chave:** Axios simplifica trabalho com APIs REST.
+</details>
+
+---
+
+### Questão 7: TypeScript Interfaces
+Por que definimos interfaces como `PredictionResponse`?
+
+```tsx
+interface PredictionResponse {
+  survived: number
+  probability: number
+  message: string
+}
+```
+
+**A)** Para fazer a API funcionar  
+**B)** Para garantir type safety no código  
+**C)** Para melhorar performance  
+**D)** Porque React exige  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) Para garantir type safety no código**
+
+**Por quê:**
+- TypeScript verifica tipos em tempo de desenvolvimento
+- Previne erros de digitação
+- Autocomplete no VS Code
+
+**Exemplo de erro prevenido:**
+```tsx
+// ❌ Sem interface - erro só em runtime
+<div>{prediction.probabilty}</div>  // Typo: probabilty
+
+// ✅ Com interface - erro em desenvolvimento
+<div>{prediction.probability}</div>  // TypeScript avisa do erro
+```
+
+**Conceito-chave:** Interfaces documentam e validam a estrutura de dados.
+</details>
+
+---
+
+### Questão 8: Async/Await
+Qual o problema neste código?
+
+```tsx
+const handleSubmit = (e: FormEvent) => {
+  e.preventDefault()
+  const response = axios.post('/predict', data)
+  setPrediction(response.data)  // ⚠️
+}
+```
+
+**A)** Falta try/catch  
+**B)** Falta await (ou .then)  
+**C)** Falta async no parâmetro  
+**D)** Falta setLoading  
+
+<details>
+<summary>💡 Ver resposta</summary>
+
+**Resposta: B) Falta await (ou .then)**
+
+**Por quê:**
+- `axios.post()` retorna uma **Promise**
+- Sem `await`, `response` é a Promise, não os dados
+- `response.data` é undefined!
+
+**Código correto:**
+```tsx
+// ✅ Opção 1: async/await
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault()
+  const response = await axios.post('/predict', data)
+  setPrediction(response.data)
+}
+
+// ✅ Opção 2: .then()
+const handleSubmit = (e: FormEvent) => {
+  e.preventDefault()
+  axios.post('/predict', data)
+    .then(response => setPrediction(response.data))
+}
+```
+
+**Conceito-chave:** Requisições HTTP são assíncronas - sempre use await ou .then.
+</details>
+
+---
+
+## 📋 Parte 2: Depuração e Troubleshooting (cenários práticos)
+
+### Cenário 1: API não responde
+Você iniciou o dashboard React, mas vê este erro no console:
+
+```
+Error: Network Error
+    at createError (axios.js:123)
+```
+
+**O que você faz PRIMEIRO?**
+
+**A)** Reinstala o Axios  
+**B)** Verifica se a API está rodando em localhost:8000  
+**C)** Muda a porta do React  
+**D)** Limpa o cache do navegador  
+
+<details>
+<summary>💡 Ver resposta e diagnóstico</summary>
+
+**Resposta: B) Verifica se a API está rodando**
+
+**Checklist de diagnóstico:**
+
+1. **Verificar se API está ativa:**
+```bash
+# Terminal 1 - API deve estar rodando
+cd python-api
+python app.py
+```
+
+2. **Testar API manualmente:**
+```bash
+curl http://localhost:8000/health
+# Ou acessar no navegador
+```
+
+3. **Verificar porta correta:**
+```tsx
+// No código React
+const API_URL = 'http://localhost:8000'  // ✅ Porta certa?
+```
+
+4. **Ver logs da API:**
+```
+INFO:     Uvicorn running on http://0.0.0.0:8000
+```
+
+**Conceito-chave:** "Network Error" quase sempre significa backend offline.
+</details>
+
+---
+
+### Cenário 2: Modelo não carregado
+A API retorna:
+
+```json
+{
+  "detail": "Modelo não carregado. Execute train_model.py primeiro."
+}
+```
+
+**Qual o problema e solução?**
+
+**A)** API está desatualizada → reinstalar FastAPI  
+**B)** Arquivo model.pkl não existe → treinar modelo  
+**C)** Python está na versão errada → atualizar Python  
+**D)** CORS bloqueado → configurar CORS  
+
+<details>
+<summary>💡 Ver resposta e solução</summary>
+
+**Resposta: B) Arquivo model.pkl não existe → treinar modelo**
+
+**Solução passo a passo:**
+
+```bash
+# 1. Ir para diretório da API
+cd python-api
+
+# 2. Treinar o modelo
+python train_model.py
+
+# 3. Verificar se arquivos foram criados
+ls -la
+# Deve mostrar:
+# model.pkl
+# model_metadata.json
+
+# 4. Reiniciar API
+python app.py
+```
+
+**O que acontece no treino:**
+```
+⬇️ Baixando dataset Titanic...
+✅ Dataset carregado: (891, 12)
+📊 Preparando dados...
+🤖 Treinando modelo Random Forest...
+✅ Modelo treinado!
+📊 Avaliando modelo...
+✅ Accuracy: 0.8268 (82.68%)
+💾 Modelo salvo: model.pkl
+💾 Metadata salva: model_metadata.json
+```
+
+**Conceito-chave:** API precisa do modelo treinado para fazer predições.
+</details>
+
+---
+
+### Cenário 3: Dashboard carrega, mas não mostra dados do modelo
+O componente `ModelInfo` mostra apenas o spinner infinito. O que investigar?
+
+**A)** O CSS do spinner está quebrado  
+**B)** O useEffect não está sendo chamado  
+**C)** A API retornou erro (verificar try/catch)  
+**D)** O React está desatualizado  
+
+<details>
+<summary>💡 Ver resposta e debugging</summary>
+
+**Resposta: C) A API retornou erro (verificar try/catch)**
+
+**Debugging passo a passo:**
+
+1. **Abrir DevTools (F12) → Console:**
+```
+GET http://localhost:8000/model/info 503
+```
+
+2. **Verificar Network tab:**
+```json
+{
+  "detail": "Metadata não carregada"
+}
+```
+
+3. **Analisar código React:**
+```tsx
+useEffect(() => {
+  const fetchModelInfo = async () => {
+    try {
+      const response = await axios.get('/model/info')
+      setMetadata(response.data)
+    } catch (err) {
+      setError(err.response?.data?.detail)  // ✅ Captura erro
+    } finally {
+      setLoading(false)  // ✅ Para spinner
+    }
+  }
+  fetchModelInfo()
+}, [])
+```
+
+**Problemas comuns:**
+- ❌ Faltou `setLoading(false)` no catch → spinner infinito
+- ❌ Faltou `finally` → spinner fica se der erro
+- ❌ Não tratou erro → usuário não sabe o que aconteceu
+
+**Conceito-chave:** Sempre trate erros e pare loading states.
+</details>
+
+---
+
+### Cenário 4: Predição retorna resultado errado
+Você envia uma passageira de 1ª classe (alta chance) mas recebe "Não sobreviveu". Possíveis causas?
+
+**A)** Modelo foi treinado com dados errados  
+**B)** Encoding errado no frontend (sex: "female" → 0 ou 1?)  
+**C)** API usa modelo diferente do treinado  
+**D)** Todas as anteriores  
+
+<details>
+<summary>💡 Ver resposta e validação</summary>
+
+**Resposta: D) Todas as anteriores (mas B é mais comum)**
+
+**Checklist de validação:**
+
+1. **Verificar encoding do frontend:**
+```tsx
+// ❌ ERRADO - String literal
+const data = { sex: "female" }
+
+// ✅ CERTO - Backend espera string mesmo
+// (Pydantic faz validação)
+const data = { sex: "female" }  // API processa
+```
+
+2. **Verificar o que API recebe:**
+```python
+# Em app.py, adicionar log temporário
+@app.post("/predict")
+async def predict(passenger: PassengerInput):
+    print(f"DEBUG: Recebido {passenger}")  # Ver no terminal
+    ...
+```
+
+3. **Testar predição manualmente:**
+```python
+# Em Python
+import joblib
+model = joblib.load('model.pkl')
+
+# Dados de teste (1ª classe, mulher)
+import pandas as pd
+test = pd.DataFrame([{
+    'Pclass': 1, 'Sex': 0,  # female=0, male=1
+    'Age': 38, 'SibSp': 1, 'Parch': 0,
+    'Fare': 71, 'Embarked': 0  # C=0, Q=1, S=2
+}])
+
+pred = model.predict(test)
+proba = model.predict_proba(test)
+print(f"Predição: {pred[0]}, Prob: {proba[0][1]:.2%}")
+# Esperado: Predição: 1, Prob: 85.30%
+```
+
+**Conceito-chave:** Sempre valide o pipeline completo (frontend → API → modelo).
+</details>
+
+---
+
+## 📋 Parte 3: Implementação Prática (análise de código)
+
+### Questão 9: Componente PredictionForm
+Analise este código:
+
+```tsx
+const [formData, setFormData] = useState({
+  pclass: 3,
+  sex: 'male',
+  age: 22
+})
+
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value } = e.target
+  setFormData(prev => ({
+    ...prev,
+    [name]: value  // ⚠️ Possível problema aqui
+  }))
+}
+```
+
+**Qual o problema potencial?**
+
+**A)** Não tem problema  
+**B)** `value` é sempre string, mas `pclass` e `age` devem ser number  
+**C)** Falta validação de input  
+**D)** `...prev` não funciona com useState  
+
+<details>
+<summary>💡 Ver resposta e correção</summary>
+
+**Resposta: B) `value` é sempre string, mas precisamos de number**
+
+**Problema:**
+- HTML inputs sempre retornam **string**
+- `pclass: "3"` em vez de `pclass: 3`
+- API pode rejeitar ou comportar incorretamente
+
+**Código correto:**
+```tsx
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const { name, value } = e.target
+  setFormData(prev => ({
+    ...prev,
+    [name]: name === 'sex' || name === 'embarked' 
+      ? value  // String
+      : Number(value)  // ✅ Converter para number
+  }))
+}
+
+// OU mais robusto:
+const isNumericField = ['pclass', 'age', 'sibsp', 'parch', 'fare'].includes(name)
+setFormData(prev => ({
+  ...prev,
+  [name]: isNumericField ? Number(value) : value
+}))
+```
+
+**Conceito-chave:** HTML inputs retornam strings - sempre converta tipos quando necessário.
+</details>
+
+---
+
+### Questão 10: Loading State Pattern
+Qual padrão é MELHOR para exibir loading?
+
+**A)**
+```tsx
+{loading && <div>Loading...</div>}
+{!loading && <div>{prediction.message}</div>}
+```
+
+**B)**
+```tsx
+{loading ? <div>Loading...</div> : <div>{prediction?.message}</div>}
+```
+
+**C)**
+```tsx
+if (loading) return <div>Loading...</div>
+return <div>{prediction.message}</div>
+```
+
+**D)** Todos são equivalentes
+
+<details>
+<summary>💡 Ver resposta e boas práticas</summary>
+
+**Resposta: B) Ternário é mais limpo para um componente**
+
+**Comparação:**
+
+```tsx
+// ✅ MELHOR - Ternário (conciso e claro)
+{loading ? (
+  <div className="loading">
+    <div className="spinner"></div>
+    <p>Analisando dados...</p>
+  </div>
+) : (
+  prediction && (
+    <div className="result">
+      {prediction.message}
+    </div>
+  )
+)}
+
+// ⚠️ OK - Early return (para componentes inteiros)
+function PredictionResult({ loading, prediction }) {
+  if (loading) {
+    return <div className="loading">Loading...</div>
+  }
+  
+  if (!prediction) {
+    return null
+  }
+  
+  return <div>{prediction.message}</div>
+}
+
+// ❌ EVITAR - Múltiplos && (confuso)
+{loading && <Loading />}
+{!loading && prediction && <Result />}
+{!loading && !prediction && <Empty />}
+```
+
+**Conceito-chave:** Use ternário para JSX inline, early return para lógica de componente.
+</details>
+
+---
+
+## 🏆 Avaliação Final - Dia 3
+
+### Pontuação:
+- **Parte 1 (Conceitos):** 8 questões × 1 ponto = **8 pontos**
+- **Parte 2 (Troubleshooting):** 4 cenários × 2 pontos = **8 pontos**
+- **Parte 3 (Código):** 2 questões × 2 pontos = **4 pontos**
+
+**Total:** 20 pontos
+
+---
+
+### 🎯 Interpretação da Pontuação:
+
+#### 🌟 18-20 pontos: EXCELENTE!
+**Você domina desenvolvimento full-stack ML!**
+
+✅ Entende REST APIs profundamente  
+✅ Domina React Hooks e TypeScript  
+✅ Sabe debugar problemas reais  
+✅ Pronto para projetos profissionais  
+
+**Próximos passos:**
+- Deploy em produção (Vercel + Railway)
+- Adicionar features avançadas (upload CSV, histórico)
+- Iniciar portfólio GitHub
+- Aplicar em projetos pessoais
+
+---
+
+#### 💪 14-17 pontos: BOM!
+**Conceitos sólidos, precisa de mais prática.**
+
+✅ Conceitos gerais compreendidos  
+⚠️ Pode ter dificuldade em debugging avançado  
+
+**Próximos passos:**
+- Refazer dashboard do zero (sem copiar código)
+- Praticar debugging com DevTools
+- Estudar async/await e Promises
+- Experimentar modificar o dashboard
+
+---
+
+#### 🔄 10-13 pontos: PARCIAL
+**Entende teoria, mas implementação precisa de atenção.**
+
+⚠️ Conceitos de API/React não estão sólidos  
+⚠️ Pode ter dificuldade em projetos independentes  
+
+**Próximos passos:**
+- Revisar documentação FastAPI e React
+- Executar dashboard célula por célula
+- Praticar com exemplos menores
+- Focar em um conceito por vez (primeiro API, depois React)
+- Repetir teste em 1 semana
+
+---
+
+#### 📚 0-9 pontos: REVISAR
+**Conceitos fundamentais precisam de reforço.**
+
+❌ Full-stack requer base sólida  
+
+**Próximos passos:**
+1. **Não desanime!** Full-stack é complexo
+2. Dividir em etapas menores:
+   - Primeiro: Dominar apenas o backend (API)
+   - Depois: Dominar apenas frontend (React estático)
+   - Por último: Integração
+3. Seguir tutoriais passo a passo
+4. Copiar código, depois modificar aos poucos
+5. Retomar teste em 2 semanas
+
+---
+
+## 🧪 Teste Prático Bônus: Crie Seu Próprio Endpoint!
+
+### 💼 Desafio Final (30 minutos)
+
+**Tarefa:** Adicione um novo endpoint `/predict/explain` que retorna:
+- Predição (survived)
+- Probabilidade
+- **3 fatores principais** que influenciaram a decisão
+
+**Requisitos:**
+1. Backend (FastAPI): Criar endpoint novo
+2. Backend: Usar `model.feature_importances_` ou SHAP
+3. Frontend: Novo botão "Explicar Predição"
+4. Frontend: Mostrar os 3 fatores
+
+**Dicas:**
+```python
+# Backend - app.py
+@app.post("/predict/explain")
+async def predict_explain(passenger: PassengerInput):
+    prediction = model.predict(input_data)[0]
+    probability = model.predict_proba(input_data)[0][1]
+    
+    # Feature importance
+    features = ['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']
+    importances = model.feature_importances_
+    
+    # Top 3
+    top_indices = importances.argsort()[-3:][::-1]
+    top_features = [
+        {"feature": features[i], "importance": float(importances[i])}
+        for i in top_indices
+    ]
+    
+    return {
+        "survived": int(prediction),
+        "probability": float(probability),
+        "explanation": top_features
+    }
+```
+
+**Avaliação:**
+- ✅ Implementou backend: +5 pontos
+- ✅ Integrou frontend: +5 pontos
+- ✅ Funcionou sem erros: +5 pontos
+- ✅ Interface bonita: +5 pontos
+
+**BONUS TOTAL:** 20 pontos extras!
+
+---
+
+## 💬 Mensagem Final - Semana 3 Completa
+
+> **Parabéns por chegar até aqui!** 🎉
+
+Você percorreu:
+- **Dia 1:** 5 modelos ML diferentes (RF, SVM, XGBoost, MLP, DT)
+- **Dia 2:** Otimização completa (Grid/Random Search, CV, Pipeline)
+- **Dia 3:** Dashboard full-stack (React + FastAPI + ML)
+
+**Isso é MUITO conteúdo!** A maioria das pessoas leva MESES para absorver isso.
+
+### 📈 Seu Progresso Real:
+
+```
+Semana 1: "O que é Machine Learning?" 🤔
+           ↓
+Semana 2: "Consigo treinar um modelo!" 💪
+           ↓
+Semana 3: "Tenho um sistema ML funcionando!" 🚀
+```
+
+### 🎯 Próximos Passos Profissionais:
+
+**Nível Júnior (você está aqui!):**
+- ✅ Consegue treinar e comparar modelos
+- ✅ Entende métricas e otimização
+- ✅ Cria APIs para servir modelos
+- ⏭️ Próximo: Deploy e monitoramento
+
+**Nível Pleno (próxima meta):**
+- 📦 Deploy em produção (Docker, Cloud)
+- 📊 Monitoramento (Prometheus, Grafana)
+- 🔄 CI/CD (GitHub Actions)
+- 📈 A/B testing e model retraining
+
+**Nível Sênior (futuro):**
+- 🏗️ Arquitetura de sistemas ML
+- 🎯 MLOps completo
+- 📐 Model governance e compliance
+- 👥 Liderar equipes técnicas
+
+---
+
+**Continue praticando e construindo! 🚀**
+
+_Lembre-se: Consultar documentação é sinal de profissionalismo, não de fraqueza._
+
+**Sucesso na sua jornada de Machine Learning! 🎓**
+

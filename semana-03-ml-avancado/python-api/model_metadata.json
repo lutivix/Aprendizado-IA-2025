@@ -1,0 +1,50 @@
+{
+  "model_name": "Random Forest Classifier",
+  "model_type": "RandomForestClassifier",
+  "accuracy": 0.8146067415730337,
+  "n_estimators": 100,
+  "max_depth": 10,
+  "features": [
+    "Pclass",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Fare"
+  ],
+  "feature_importance": [
+    {
+      "feature": "Sex",
+      "importance": 0.3528657135268302
+    },
+    {
+      "feature": "Fare",
+      "importance": 0.2393720292341772
+    },
+    {
+      "feature": "Age",
+      "importance": 0.21207667533537428
+    },
+    {
+      "feature": "Pclass",
+      "importance": 0.1076226211442481
+    },
+    {
+      "feature": "SibSp",
+      "importance": 0.05686880957871194
+    },
+    {
+      "feature": "Parch",
+      "importance": 0.031194151180658228
+    }
+  ],
+  "training_samples": 709,
+  "test_samples": 178,
+  "target": "Survived",
+  "encodings": {
+    "Sex": {
+      "male": 1,
+      "female": 0
+    }
+  }
+}

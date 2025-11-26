@@ -154,6 +154,7 @@ Aprendizado-IA-2025/
 - **Resultado:** Sistema full-stack 100% funcional
 
 **📊 Conquistas:**
+
 - ✅ 4 modelos otimizados com Grid/Random Search
 - ✅ 2 notebooks completos (80 células totais, 100% executadas)
 - ✅ Dashboard full-stack funcional (FastAPI + React + TypeScript)

@@ -148,6 +148,27 @@ Aprendizado-IA-2025/
 - [x] Modelo Random Forest treinado (81.46% accuracy)
 - [x] Frontend React + TypeScript completo
 - [x] 3 componentes criados (ModelInfo, PredictionForm, PredictionResult)
+
+### 🔄 **Semana 4 (3 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** 🎯
+**Tempo:** ~2h | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md) • [README](semana-04-consolidacao/README.md)
+
+**Dia 1:** Revisão Comparativa de Algoritmos ML ✅ CONCLUÍDO
+- [x] Estrutura da semana criada (README + Docs)
+- [x] Documento teórico completo (350+ linhas)
+- [x] Notebook interativo com 17 células (11 seções)
+- [x] 5 algoritmos comparados lado-a-lado
+- [x] Visualizações de performance (barplot + cross-validation)
+- [x] Feature importance (Random Forest + XGBoost)
+- [x] Guia de decisão: quando usar cada algoritmo
+- [x] Exercícios práticos com respostas
+- **Resultado:** Nota 10 nos testes! 🎉
+
+**📊 Conquistas:**
+- 🤖 5 modelos treinados: Logistic Regression, Random Forest, XGBoost, SVM, MLP
+- 📊 Comparação visual de accuracy
+- 🔍 Feature importance para modelos tree-based
+- 📚 Checklist mental para escolha de algoritmos
+- 🎯 Consolidação de conhecimento das 3 semanas anteriores
 - [x] Integração full-stack testada e operacional
 - [x] Dark theme responsivo implementado
 - [x] Sistema de predição em tempo real funcionando
@@ -168,14 +189,30 @@ Aprendizado-IA-2025/
 - 📚 ~2.500 linhas de código Python
 - 📝 ~5.000 palavras de documentação
 
-### 📋 **Semana 4:** Consolidação ML + Projeto Prático
-**Foco:** Respirar, revisar conceitos nebulosos, projeto simples aplicado
+### 🔄 **Semana 4 (3 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** ⚡
+**Tempo:** TBD | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md)  
+**Foco:** 🧘‍♀️ Respirar, revisar conceitos nebulosos, projeto simples aplicado
 
-- [ ] Revisão: quando usar cada algoritmo ML
-- [ ] Revisão: feature engineering na prática
-- [ ] Projeto prático: modelo simples para gestão financeira
-- [ ] Consolidação de boas práticas
+**Dia 1:** Revisão Comparativa de Algoritmos ⚡ INICIADO
+- [x] Estrutura completa criada (README + Docs + Notebook)
+- [x] Documento teórico de revisão ML (~350 linhas)
+- [x] Notebook interativo comparando 5 algoritmos
+- [x] Guia de decisão: quando usar cada modelo
+- [x] Exercícios práticos de cenários reais
+- [ ] Executar notebook e validar resultados
+- **Objetivo:** Entender QUANDO usar cada algoritmo
+
+**Dia 2:** Feature Engineering na Prática 📋 PENDENTE
+- [ ] Revisão: técnicas de feature engineering
+- [ ] Casos práticos de transformação de dados
+- [ ] Impacto das features na performance
+- [ ] Boas práticas e armadilhas comuns
+
+**Dia 3:** Projeto Prático - Gestão Financeira 📋 PENDENTE
+- [ ] Projeto aplicado com dados financeiros
+- [ ] Pipeline ML completo simplificado
 - [ ] Documentação de aprendizados-chave
+- [ ] Consolidação de boas práticas
 
 **💡 Objetivo:** Solidificar conhecimento antes de avançar
 
@@ -260,7 +297,7 @@ Conforme necessidade dos projetos:
 ██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
-░░░░░░░░░░   0% Semana 4 - Consolidação ML
+███░░░░░░░  30% Semana 4 - Consolidação ML ⚡ (Dia 1 iniciado)
 ░░░░░░░░░░   0% Semana 5-6 - ML Não Supervisionado
 ░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
 ░░░░░░░░░░   0% Semana 9-10 - NLP Básico
@@ -286,19 +323,21 @@ Conforme necessidade dos projetos:
 - ⏱️ **Tempo investido:** ~12h (3 dias completos)
 - 📝 **Documentação:** 10 documentos (~25.000 palavras totais)
 - 🎯 **Objetivos:** 100% concluídos (todos os 3 dias)
-- 🤖 **ML:** 5 modelos implementados (melhor: 82% accuracy)
+- 🤖 **ML:** 5 modelos implementados (melhor: 85.1% accuracy XGBoost)
 - 🔧 **Otimização:** Grid/Random Search + Pipeline completo
 - 🎨 **Full Stack:** Dashboard React + FastAPI funcionando
 - 💻 **Código:** ~1.800 linhas (Python + TypeScript/React)
 - 🧪 **Testes:** 80 questões de validação criadas
 - 💪 **Nível:** Intermediário avançado → Avançado iniciante
-- 📝 **Documentação:** 6 documentos (~15.000 palavras)
-- 🎯 **Objetivos:** 67% concluídos (Dia 1 ✅ + Dia 2 ✅)
-- 🤖 **ML Avançado:** 4 modelos otimizados (RF, XGBoost, SVM, MLP)
-- 📊 **Melhor resultado:** 85.1% accuracy (XGBoost)
-- 🎛️ **Hyperparameter Tuning:** Grid/Random Search + CV implementados
-- 📚 **Código:** ~2.500 linhas Python (2 notebooks completos)
-- 💪 **Nível:** Intermediário avançado → Avançado iniciante
+
+**Métricas Semana 4:** (Em andamento)
+- ⏱️ **Tempo investido:** TBD
+- 📝 **Documentação:** 2 documentos (~350 linhas)
+- 🎯 **Objetivos:** 30% concluídos (Dia 1 iniciado)
+- 📚 **Foco:** Consolidação e revisão (não performance)
+- 🧠 **Algoritmos revisados:** 5 (LR, RF, XGBoost, SVM, MLP)
+- 📊 **Notebook:** Comparação interativa criada
+- 💪 **Nível:** Consolidando conhecimento avançado
 
 **Meta Semanal:**
 - **Blocos protegidos:** 2-3 sessões/semana

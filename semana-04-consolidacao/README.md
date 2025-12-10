@@ -11,16 +11,16 @@
 Esta semana é estratégica para consolidar todo o aprendizado das 3 semanas anteriores antes de avançar para novos tópicos. O foco é **qualidade sobre quantidade**.
 
 ### 📚 Dia 1: Revisão Conceitual e Comparativa
-- [ ] Revisão: quando usar cada algoritmo ML
-- [ ] Comparação visual e prática de algoritmos
-- [ ] Árvore de decisão para escolha de modelos
-- [ ] Exercícios práticos de cenários reais
+- [x] Revisão: quando usar cada algoritmo ML
+- [x] Comparação visual e prática de algoritmos
+- [x] Árvore de decisão para escolha de modelos
+- [x] Exercícios práticos de cenários reais
 
 ### 🛠️ Dia 2: Feature Engineering na Prática
-- [ ] Revisão: técnicas de feature engineering
-- [ ] Casos práticos de transformação de dados
-- [ ] Impacto das features na performance
-- [ ] Boas práticas e armadilhas comuns
+- [x] Revisão: técnicas de feature engineering
+- [x] Casos práticos de transformação de dados
+- [x] Impacto das features na performance
+- [x] Boas práticas e armadilhas comuns
 
 ### 💰 Dia 3: Projeto Prático Simples - Gestão Financeira
 - [ ] Projeto aplicado com dados financeiros pessoais
@@ -80,7 +80,7 @@ semana-04-consolidacao/
 
 ```
 ██████████ 100% Dia 1 - Revisão Algoritmos ML ✅ CONCLUÍDO (3 Dez)
-░░░░░░░░░░   0% Dia 2 - Feature Engineering  
+██████████ 100% Dia 2 - Feature Engineering  ✅ CONCLUÍDO (10 Dez)
 ░░░░░░░░░░   0% Dia 3 - Projeto Prático
 ```
 
@@ -92,9 +92,20 @@ semana-04-consolidacao/
 - ✅ Exercícios práticos resolvidos
 - ✅ Teste executado com sucesso: **NOTA 10** 🎉
 
+**Status Dia 2:**
+- ✅ Documento teórico completo (1000+ linhas)
+- ✅ 3 notebooks práticos criados:
+  - 02a: Transformações Numéricas (Scaling, Log, Binning)
+  - 02b: Transformações Categóricas (OHE, Label, Target, Frequency)
+  - 02c: Feature Creation & Selection (Tempo, Agregações, Seleção)
+- ✅ Comparações de performance entre técnicas
+- ✅ Boas práticas e armadilhas documentadas
+- ✅ Checklist completo de Feature Engineering
+
 ## 🔗 Links Úteis
 
 - [Documento Dia 1](../docs/17-dia1-semana4-revisao-ml.md)
+- [Documento Dia 2](../docs/18-dia2-semana4-feature-engineering.md)
 - [AUTOAVALIACAO.md](../docs/AUTOAVALIACAO.md)
 - [ML Cheatsheet](../docs/13-ml-cheatsheet.md)
 

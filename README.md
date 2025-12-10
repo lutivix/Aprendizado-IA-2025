@@ -149,10 +149,10 @@ Aprendizado-IA-2025/
 - [x] Frontend React + TypeScript completo
 - [x] 3 componentes criados (ModelInfo, PredictionForm, PredictionResult)
 
-### 🔄 **Semana 4 (3 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** 🎯
-**Tempo:** ~2h | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md) • [README](semana-04-consolidacao/README.md)
+### 🔄 **Semana 4 (3-10 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** 🎯
+**Tempo:** ~6h | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md) • [Dia 2](docs/18-dia2-semana4-feature-engineering.md) • [README](semana-04-consolidacao/README.md)
 
-**Dia 1:** Revisão Comparativa de Algoritmos ML ✅ CONCLUÍDO
+**Dia 1:** Revisão Comparativa de Algoritmos ML ✅ CONCLUÍDO (3 Dez)
 - [x] Estrutura da semana criada (README + Docs)
 - [x] Documento teórico completo (350+ linhas)
 - [x] Notebook interativo com 17 células (11 seções)
@@ -163,12 +163,26 @@ Aprendizado-IA-2025/
 - [x] Exercícios práticos com respostas
 - **Resultado:** Nota 10 nos testes! 🎉
 
+**Dia 2:** Feature Engineering na Prática ✅ CONCLUÍDO (10 Dez)
+- [x] Documento teórico completo (1000+ linhas)
+- [x] 3 notebooks práticos criados:
+  - 02a: Transformações Numéricas (StandardScaler, MinMaxScaler, RobustScaler, Log, Binning)
+  - 02b: Transformações Categóricas (One-Hot, Label, Ordinal, Target, Frequency)
+  - 02c: Feature Creation & Selection (Tempo, Agregações, Importância)
+- [x] Comparações de performance entre técnicas
+- [x] Boas práticas e armadilhas documentadas
+- [x] Checklist completo de Feature Engineering
+- **Resultado:** Material completo para consulta e prática!
+
 **📊 Conquistas:**
-- 🤖 5 modelos treinados: Logistic Regression, Random Forest, XGBoost, SVM, MLP
-- 📊 Comparação visual de accuracy
+- 🤖 5 modelos treinados e comparados (Logistic Regression, Random Forest, XGBoost, SVM, MLP)
+- 📊 Comparação visual de accuracy e cross-validation
 - 🔍 Feature importance para modelos tree-based
-- 📚 Checklist mental para escolha de algoritmos
+- 🔧 10+ técnicas de Feature Engineering implementadas
+- 📚 Checklist mental para escolha de algoritmos e transformações
 - 🎯 Consolidação de conhecimento das 3 semanas anteriores
+- 💻 ~3 notebooks interativos com exemplos práticos
+- 📝 ~1.350 linhas de documentação técnica
 - [x] Integração full-stack testada e operacional
 - [x] Dark theme responsivo implementado
 - [x] Sistema de predição em tempo real funcionando
@@ -188,25 +202,6 @@ Aprendizado-IA-2025/
 - 💻 **~1.200 linhas de código Python + ~600 linhas TypeScript/React**
 - 📚 ~2.500 linhas de código Python
 - 📝 ~5.000 palavras de documentação
-
-### 🔄 **Semana 4 (3 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** ⚡
-**Tempo:** TBD | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md)  
-**Foco:** 🧘‍♀️ Respirar, revisar conceitos nebulosos, projeto simples aplicado
-
-**Dia 1:** Revisão Comparativa de Algoritmos ⚡ INICIADO
-- [x] Estrutura completa criada (README + Docs + Notebook)
-- [x] Documento teórico de revisão ML (~350 linhas)
-- [x] Notebook interativo comparando 5 algoritmos
-- [x] Guia de decisão: quando usar cada modelo
-- [x] Exercícios práticos de cenários reais
-- [ ] Executar notebook e validar resultados
-- **Objetivo:** Entender QUANDO usar cada algoritmo
-
-**Dia 2:** Feature Engineering na Prática 📋 PENDENTE
-- [ ] Revisão: técnicas de feature engineering
-- [ ] Casos práticos de transformação de dados
-- [ ] Impacto das features na performance
-- [ ] Boas práticas e armadilhas comuns
 
 **Dia 3:** Projeto Prático - Gestão Financeira 📋 PENDENTE
 - [ ] Projeto aplicado com dados financeiros
@@ -297,7 +292,7 @@ Conforme necessidade dos projetos:
 ██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
-███░░░░░░░  30% Semana 4 - Consolidação ML ⚡ (Dia 1 iniciado)
+███████░░░  67% Semana 4 - Consolidação ML ⚡ (Dias 1 e 2 completos)
 ░░░░░░░░░░   0% Semana 5-6 - ML Não Supervisionado
 ░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
 ░░░░░░░░░░   0% Semana 9-10 - NLP Básico
@@ -331,7 +326,13 @@ Conforme necessidade dos projetos:
 - 💪 **Nível:** Intermediário avançado → Avançado iniciante
 
 **Métricas Semana 4:** (Em andamento)
-- ⏱️ **Tempo investido:** TBD
+- ⏱️ **Tempo investido:** ~6h (2 dias completos)
+- 📝 **Documentação:** 2 documentos (~1.350 linhas)
+- 🎯 **Objetivos:** 67% concluídos (Dias 1 e 2)
+- 🤖 **ML:** 5 modelos comparados + 10+ técnicas FE implementadas
+- 📚 **Material:** 3 notebooks práticos + checklists completos
+- 🎓 **Resultado:** Nota 10 nos testes do Dia 1!
+- 💪 **Nível:** Consolidação de conhecimento → Preparação para projetos reais
 - 📝 **Documentação:** 2 documentos (~350 linhas)
 - 🎯 **Objetivos:** 30% concluídos (Dia 1 iniciado)
 - 📚 **Foco:** Consolidação e revisão (não performance)

@@ -2,10 +2,12 @@
 
 ## 📋 Contexto e Metodologia
 
-**Período:** Outubro 2025 - Fevereiro 2026 (12-14 semanas)  
+**Período:** Outubro 2025 - em andamento (prazo ajustado)  
 **Metodologia:** 60% prática + 40% teoria com GitHub Copilot  
 **Ritmo:** 2 dias/semana (Qua/Sex) com flexibilidade para 3 dias quando possível  
 **Horários protegidos:** Qua/Sex manhã + Ter buffer dinâmico  
+**⏸️ Pausa:** 10 Dez 2025 – 18 Mar 2026 (~3 meses) — Recesso de fim de ano + demanda de trabalho  
+**▶️ Retomada:** 18 Mar 2026 — Revisão geral + continuação Semana 4 Dia 3  
 
 ## 🎯 Objetivos Integrados
 
@@ -149,8 +151,8 @@ Aprendizado-IA-2025/
 - [x] Frontend React + TypeScript completo
 - [x] 3 componentes criados (ModelInfo, PredictionForm, PredictionResult)
 
-### 🔄 **Semana 4 (3-10 Dez):** Consolidação ML + Projeto Prático - **EM ANDAMENTO** 🎯
-**Tempo:** ~6h | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md) • [Dia 2](docs/18-dia2-semana4-feature-engineering.md) • [README](semana-04-consolidacao/README.md)
+### ✅ **Semana 4 (3-10 Dez / Concluído 1 Abr 2026):** Consolidação ML + Projeto Prático
+**Tempo:** ~6h | **Docs:** [Dia 1](docs/17-dia1-semana4-revisao-ml.md) • [Dia 2](docs/18-dia2-semana4-feature-engineering.md) • [Dia 3](docs/19-dia3-semana4-projeto-ia-financeiro.md) • [README](semana-04-consolidacao/README.md)
 
 **Dia 1:** Revisão Comparativa de Algoritmos ML ✅ CONCLUÍDO (3 Dez)
 - [x] Estrutura da semana criada (README + Docs)
@@ -203,11 +205,19 @@ Aprendizado-IA-2025/
 - 📚 ~2.500 linhas de código Python
 - 📝 ~5.000 palavras de documentação
 
-**Dia 3:** Projeto Prático - Gestão Financeira 📋 PENDENTE
-- [ ] Projeto aplicado com dados financeiros
-- [ ] Pipeline ML completo simplificado
-- [ ] Documentação de aprendizados-chave
-- [ ] Consolidação de boas práticas
+**Retomada (18 Mar 2026):** Revisão Geral após pausa ✅ CONCLUÍDO
+- [x] Revisão oral de conceitos (8.5/9)
+
+**Dia 3 (1 Abr 2026):** Projeto IA Financeiro ✅ CONCLUÍDO
+- [x] Branch `IALearning` criado no projeto Financeiro
+- [x] Symlink `ppiaFinanceiro` criado
+- [x] Exploração e documentação completa do projeto
+- [x] 4 problemas ML identificados e avaliados
+- [x] Problema selecionado: Previsão de Estouro de Orçamento Semanal (classificação binária)
+- [x] Notebook `03-projeto-financeiro.ipynb` — executado com sucesso
+- [x] EDA: 3.668 despesas reais, 15 meses, 3 pessoas (Usuário/Bia/Mãe)
+- [x] Feature engineering: `ratio_orc_hist`, `media_hist_cat_semana`, `coef_var_global`
+- [x] Melhor modelo: **XGBoost — F1 0.667 · AUC 0.676**
 
 **💡 Objetivo:** Solidificar conhecimento antes de avançar
 
@@ -292,13 +302,15 @@ Conforme necessidade dos projetos:
 ██████████ 100% Semana 1 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
-███████░░░  67% Semana 4 - Consolidação ML ⚡ (Dias 1 e 2 completos)
+██████████ 100% Semana 4 - Consolidação ML ✅ CONCLUÍDA (1 Abr 2026)
 ░░░░░░░░░░   0% Semana 5-6 - ML Não Supervisionado
 ░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
 ░░░░░░░░░░   0% Semana 9-10 - NLP Básico
 ░░░░░░░░░░   0% Semana 11-12 - Projeto Financeiro
 ░░░░░░░░░░   0% Semana 13-14 - Projeto Estoque
 ```
+
+> ⏸️ **Pausa de ~3 meses** (Dez/2025 → Mar/2026): recesso de fim de ano + demanda de trabalho. Retomada em 18/03/2026 com revisão validada (8.5/9).
 
 **Métricas Semana 1:**
 - ⏱️ **Tempo investido:** 5h10min (Dia 1: 2h20 + Dia 2: 1h20 + Dia 3: 1h30)
@@ -325,20 +337,16 @@ Conforme necessidade dos projetos:
 - 🧪 **Testes:** 80 questões de validação criadas
 - 💪 **Nível:** Intermediário avançado → Avançado iniciante
 
-**Métricas Semana 4:** (Em andamento)
-- ⏱️ **Tempo investido:** ~6h (2 dias completos)
+**Métricas Semana 4:** (Concluída)
+- ⏱️ **Tempo investido:** ~6h + sessão de retomada (18 Mar 2026)
 - 📝 **Documentação:** 2 documentos (~1.350 linhas)
-- 🎯 **Objetivos:** 67% concluídos (Dias 1 e 2)
+- 🎯 **Objetivos:** 75% concluídos (Dias 1, 2 + Revisão retomada)
 - 🤖 **ML:** 5 modelos comparados + 10+ técnicas FE implementadas
 - 📚 **Material:** 3 notebooks práticos + checklists completos
-- 🎓 **Resultado:** Nota 10 nos testes do Dia 1!
+- 🎓 **Resultado:** Nota 10 nos testes do Dia 1! | 8.5/9 na revisão de retomada
+- ⏸️ **Pausa:** ~3 meses (Dez 2025 → Mar 2026)
+- ▶️ **Retomada:** 18 Mar 2026 — conhecimento validado, pronto para Dia 3
 - 💪 **Nível:** Consolidação de conhecimento → Preparação para projetos reais
-- 📝 **Documentação:** 2 documentos (~350 linhas)
-- 🎯 **Objetivos:** 30% concluídos (Dia 1 iniciado)
-- 📚 **Foco:** Consolidação e revisão (não performance)
-- 🧠 **Algoritmos revisados:** 5 (LR, RF, XGBoost, SVM, MLP)
-- 📊 **Notebook:** Comparação interativa criada
-- 💪 **Nível:** Consolidando conhecimento avançado
 
 **Meta Semanal:**
 - **Blocos protegidos:** 2-3 sessões/semana

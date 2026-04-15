@@ -221,16 +221,31 @@ Aprendizado-IA-2025/
 
 **💡 Objetivo:** Solidificar conhecimento antes de avançar
 
-### 📋 **Semana 5-6:** ML Não Supervisionado + Clustering
-**Foco:** Técnicas úteis para segmentação e detecção
+### ⌛ **Semana 5 (Abr 2026):** ML Não Supervisionado + Clustering - **EM ANDAMENTO**
+**Foco:** Técnicas de agrupamento, detecção de anomalias e segmentação  
+**Docs:** [Dia 1](docs/20-dia1-semana5-clustering-fundamentos.md) • [Dia 2](docs/21-dia2-semana5-dbscan-anomalias.md) • [README](semana-05-ml-nao-supervisionado/README.md)
 
-- [ ] K-Means, DBSCAN, Hierarchical Clustering
-- [ ] Anomaly Detection (útil para fraudes/estoque)
-- [ ] PCA e redução de dimensionalidade (aprofundar)
-- [ ] Projeto: segmentação de clientes ou análise de estoque
-- [ ] Integração com pipeline de dados
+**Dia 1:** Fundamentos de Clustering — K-Means + Hierárquico ✅ CONCLUÍDO (8 Abr)
+- [x] K-Means: centróides, inércia, Elbow Method
+- [x] Silhouette Score para avaliar clusters
+- [x] Clustering Hierárquico: dendrogramas + linkage
+- [x] Comparação K-Means vs Hierárquico
+- [x] Interpretação e nomeação de clusters
+- **Resultado:** K=5, Silhouette 0.598, ARI 0.960 (K-Means ≈ Hierárquico)
 
-**💡 Aplicação:** Segmentação, detecção de padrões anormais
+**Dia 2:** DBSCAN + Detecção de Anomalias ✅ CONCLUÍDO (9 Abr)
+- [x] DBSCAN: clustering baseado em densidade + k-distance
+- [x] K-Means vs DBSCAN (formatos irregulares + outliers)
+- [x] Isolation Forest + LOF (anomaly detection)
+- [x] PCA aprofundado (variância explicada, redução + clustering)
+- **Resultado:** DBSCAN 2 clusters (acertou onde K-Means errou), IF/LOF 19/20 outliers, PCA Sil 0.4718 (+133%)
+
+**Dia 3:** Projeto Prático — Segmentação Financeira
+- [ ] Segmentação de despesas do projeto Financeiro
+- [ ] Pipeline completo: pré-processamento → clustering → insights
+- [ ] Visualizações e resultados acionáveis
+
+**💡 Aplicação:** Segmentação de despesas, detecção de padrões anormais
 
 ### 📋 **Semana 7-8:** Séries Temporais + Forecasting
 **Foco:** Previsão essencial para gestão financeira e estoque
@@ -303,7 +318,7 @@ Conforme necessidade dos projetos:
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 4 - Consolidação ML ✅ CONCLUÍDA (1 Abr 2026)
-░░░░░░░░░░   0% Semana 5-6 - ML Não Supervisionado
+██████░░░░  67% Semana 5 - ML Não Supervisionado ▶️ EM ANDAMENTO (Dia 2/3 ✅ — 9 Abr 2026)
 ░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
 ░░░░░░░░░░   0% Semana 9-10 - NLP Básico
 ░░░░░░░░░░   0% Semana 11-12 - Projeto Financeiro

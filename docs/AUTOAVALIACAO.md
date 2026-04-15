@@ -281,6 +281,65 @@ Use este checklist **ANTES de avançar** para a próxima semana:
 - [ ] Interpretei feature importance
 - [ ] Sei o que melhorar no meu pipeline
 
+### Semana 4 → Semana 5:
+- [ ] Sei quando usar cada algoritmo (RF, XGBoost, SVM, LR)
+- [ ] Domino 10+ técnicas de Feature Engineering
+- [ ] Apliquei ML em dados reais (Projeto Financeiro)
+- [ ] Entendi que dados reais são mais difíceis que datasets acadêmicos
+
+---
+
+### ✅ Semana 5: ML Não Supervisionado + Clustering
+
+#### Dia 1: Fundamentos de Clustering
+**Conceitos-chave:**
+- [ ] Sei explicar a diferença entre supervisionado e não supervisionado
+- [ ] Entendo K-Means: centróides, inércia, convergência
+- [ ] Sei interpretar o Método do Cotovelo (Elbow)
+- [ ] Entendo Silhouette Score (o que significa -1, 0, 1)
+- [ ] Sei o que é Clustering Hierárquico e dendrograma
+- [ ] Entendo os métodos de linkage (ward, single, complete, average)
+
+**Habilidades práticas:**
+- [ ] Consigo aplicar StandardScaler antes de clustering
+- [ ] Sei usar Elbow + Silhouette para escolher K
+- [ ] Consigo treinar K-Means e visualizar clusters
+- [ ] Sei criar e interpretar dendrogramas
+- [ ] Consigo dar nomes significativos aos clusters (interpretação de negócio)
+
+**Quando avançar para Dia 2:**
+Se você consegue:
+- Explicar por que escalar é obrigatório em clustering
+- Escolher K com base em Elbow + Silhouette (não arbitrariamente)
+- Interpretar clusters com significado de negócio (não só números)
+- Comparar K-Means vs Hierárquico e saber quando usar cada um
+
+---
+
+#### Dia 2: DBSCAN + Detecção de Anomalias + PCA
+**Conceitos-chave:**
+- [ ] Entendo DBSCAN: eps, min_samples, core/border/noise points
+- [ ] Sei quando usar DBSCAN vs K-Means (formatos irregulares, outliers)
+- [ ] Entendo k-distance plot para escolher eps
+- [ ] Sei o que é Isolation Forest e como detecta anomalias
+- [ ] Entendo LOF (Local Outlier Factor) e diferenças vs IF
+- [ ] Sei o que é PCA e variância explicada
+
+**Habilidades práticas:**
+- [ ] Consigo aplicar DBSCAN e interpretar clusters + noise
+- [ ] Sei comparar K-Means vs DBSCAN em datasets não-convexos (moons)
+- [ ] Consigo usar Isolation Forest e LOF para detectar anomalias
+- [ ] Sei interpretar o gráfico de variância explicada do PCA
+- [ ] Consigo criar Pipeline: PCA → DBSCAN + Anomaly Detection
+- [ ] Sei comparar métodos (DBSCAN noise vs IF vs LOF) com métricas
+
+**Quando avançar para Dia 3:**
+Se você consegue:
+- Explicar quando DBSCAN é melhor que K-Means (e vice-versa)
+- Escolher entre IF e LOF para detecção de anomalias
+- Usar PCA para melhorar clustering (remover ruído)
+- Criar um pipeline completo de análise não supervisionada
+
 ---
 
 ## 🎯 Sua Auto-Avaliação Semanal

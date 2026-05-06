@@ -8,6 +8,7 @@
 **Horários protegidos:** Qua/Sex manhã + Ter buffer dinâmico  
 **⏸️ Pausa:** 10 Dez 2025 – 18 Mar 2026 (~3 meses) — Recesso de fim de ano + demanda de trabalho  
 **▶️ Retomada:** 18 Mar 2026 — Revisão geral + continuação Semana 4 Dia 3  
+**↪️ Pivô Estratégico:** Mai 2026 — Após 6 semanas de ML clássico + DL fundamentos, foco muda para aplicação real: LLM Integration + produtos próprios (BelgoEstoque, FinanceiroPY, Ferroviário)  
 
 ## 🎯 Objetivos Integrados
 
@@ -221,9 +222,9 @@ Aprendizado-IA-2025/
 
 **💡 Objetivo:** Solidificar conhecimento antes de avançar
 
-### ⌛ **Semana 5 (Abr 2026):** ML Não Supervisionado + Clustering - **EM ANDAMENTO**
+### ✅ **Semana 5 (Abr 2026):** ML Não Supervisionado + Clustering - **CONCLUÍDA** 🎉
 **Foco:** Técnicas de agrupamento, detecção de anomalias e segmentação  
-**Docs:** [Dia 1](docs/20-dia1-semana5-clustering-fundamentos.md) • [Dia 2](docs/21-dia2-semana5-dbscan-anomalias.md) • [README](semana-05-ml-nao-supervisionado/README.md)
+**Docs:** [Dia 1](docs/20-dia1-semana5-clustering-fundamentos.md) • [Dia 2](docs/21-dia2-semana5-dbscan-anomalias.md) • [Dia 3](docs/22-dia3-semana5-segmentacao-financeira-aplicada.md) • [README](semana-05-ml-nao-supervisionado/README.md)
 
 **Dia 1:** Fundamentos de Clustering — K-Means + Hierárquico ✅ CONCLUÍDO (8 Abr)
 - [x] K-Means: centróides, inércia, Elbow Method
@@ -240,63 +241,90 @@ Aprendizado-IA-2025/
 - [x] PCA aprofundado (variância explicada, redução + clustering)
 - **Resultado:** DBSCAN 2 clusters (acertou onde K-Means errou), IF/LOF 19/20 outliers, PCA Sil 0.4718 (+133%)
 
-**Dia 3:** Projeto Prático — Segmentação Financeira
-- [ ] Segmentação de despesas do projeto Financeiro
-- [ ] Pipeline completo: pré-processamento → clustering → insights
-- [ ] Visualizações e resultados acionáveis
+**Dia 3:** Projeto Prático — Segmentação Financeira ✅ CONCLUÍDO (29 Abr)
+- [x] Pipeline completo sobre banco SQLite real do projeto Financeiro
+- [x] K-Means + Agglomerative + DBSCAN comparados no mesmo dataset
+- [x] Baseline supervisionado (LogReg + RandomForest) para validar features
+- [x] PCA 2D para visualização + cluster profiling com taxa de estouro
+- [x] Nomeação automática de perfis (Pressionado, Equilibrado, Folgado) + recomendações
+- **Resultado:** Notebook 28 células executadas, perfis interpretados em linguagem de negócio
 
 **💡 Aplicação:** Segmentação de despesas, detecção de padrões anormais
 
-### 📋 **Semana 7-8:** Séries Temporais + Forecasting
-**Foco:** Previsão essencial para gestão financeira e estoque
+### ⏳ **Semana 6 (Abr-Mai 2026):** Deep Learning Intro - **EM ANDAMENTO**
+**Foco:** Redes neurais do zero, Keras/TensorFlow, primeira NN treinada  
+**Docs:** [Dia 1](docs/23-dia1-semana6-deep-learning-intro.md) • [README](semana-06-deep-learning/README.md)
 
-- [ ] Time Series basics (tendência, sazonalidade)
-- [ ] ARIMA, Prophet, modelos de forecasting
-- [ ] Previsão de vendas e demanda
-- [ ] Análise de séries financeiras
-- [ ] Projeto: previsão para gestão de estoque
+**Dia 1:** Fundamentos de Deep Learning ✅ CONCLUÍDO
+- [x] Diferença entre ML clássico e Deep Learning
+- [x] Anatomia de uma rede neural: neurônio, camada, função de ativação
+- [x] Forward pass + backpropagation (intuição)
+- [x] Loss, otimizadores (SGD, Adam) e learning rate
+- [x] Primeira rede com Keras (Sequential) em dataset tabular
+- [x] Comparação NN vs RandomForest no mesmo problema
 
-**💡 Aplicação:** Previsão de vendas, planejamento de estoque
+**Dia 2:** NN na prática — BelgoEstoque *(a realizar)*
+- [ ] NN aplicada a previsão de demanda (contexto real de produto)
+- [ ] Comparação NN vs XGBoost no mesmo problema
+- [ ] Decisão fundamentada: quando DL vale, quando ML clássico vence
 
-### 📋 **Semana 9-10:** NLP Básico + Processamento de Texto
-**Foco:** Trabalhar com texto, chatbots simples
+**Dia 3:** Ponte para LLMs *(a realizar)*
+- [ ] Como o aprendizado de 6 semanas conecta com GPT/Claude
+- [ ] Transformers em termos intuitivos (sem matemática pesada)
+- [ ] Preparação conceitual para Bloco 1 (LLM Integration)
 
-- [ ] Tokenização, embedding, TF-IDF
-- [ ] Sentiment analysis básico
-- [ ] Chatbot simples (regras + ML)
-- [ ] Processamento de notas fiscais/descrições
-- [ ] Projeto: assistente para consultas de dados
+**💡 Aplicação:** Base conceitual para LLM Integration (Fase 2)
 
-**💡 Aplicação:** Chatbots, processamento de documentos
+---
 
-### 📋 **Semana 11-12:** Agente IA Financeiro (Projeto Real)
-**Foco:** Aplicar tudo no projeto de gestão financeira
+## 🚀 Fase 2: Aplicação Real
 
-- [ ] Análise de requisitos do projeto
-- [ ] Feature engineering com dados reais
-- [ ] Modelos de previsão financeira
-- [ ] Dashboard de visualização
-- [ ] Deploy básico e testes
+> **↪️ Pivô estratégico (Mai 2026):** Após dominar ML clássico (Sem 1–5) e fundamentos de DL (Sem 6), o plano muda de curso teórico para **aplicação em produtos reais**. Séries Temporais e NLP do zero saem — entram LLM integration e evolução dos próprios produtos.
 
-**💡 Aplicação:** Seu projeto real de gestão financeira
+### 📋 **Bloco 1:** LLM Integration + O Novo Fluxo de Trabalho
 
-### 📋 **Semana 13-14:** Agente IA Estoque + Integração Final
-**Foco:** Segundo projeto real + integração com sistemas
+#### 1A — O Novo Analista de Sistemas
+- [ ] VS Code + extensões de IA no fluxo diário
+- [ ] Claude Code na prática — o que muda no dia a dia
+- [ ] Claude Desktop — casos de uso vs Claude Code
+- [ ] MCP servers — o que são e por que importam
+- [ ] Co-working com agentes (worktrees, sessões paralelas)
+- [ ] Rotina de trabalho: orquestrando todas as ferramentas
 
-- [ ] Sistema de previsão de demanda
-- [ ] Detecção de anomalias em estoque
-- [ ] Integração com sistemas existentes
-- [ ] Automação de processos
-- [ ] Documentação completa
+#### 1B — LLM Integration em código
+- [ ] Claude API + tool use na prática
+- [ ] Integrar LLM em aplicações NestJS e Python
+- [ ] RAG básico (busca semântica em dados próprios)
 
-**💡 Aplicação:** Seu projeto real de gerenciamento de estoque
+**💡 Aplicação:** Fluxo de trabalho diário da LF Solutions
 
-### 🎯 **Tópicos Avançados (Opcional/Futuro)**
-Conforme necessidade dos projetos:
-- Deep Learning (Redes Neurais complexas)
-- Computer Vision
-- Reinforcement Learning
-- Deploy em produção avançado
+---
+
+### 📋 **Bloco 2:** BelgoEstoque AI *(roadmap real do produto)*
+- [ ] Fase 2: Alertas inteligentes com ML clássico (clustering + threshold)
+- [ ] Fase 3: Relatórios automáticos com LLM
+- [ ] Fase 4: Previsão de demanda (NN ou XGBoost — decisão baseada em dados)
+
+**💡 Aplicação:** Cliente ativo — Belgo Cercas ES
+
+---
+
+### 📋 **Bloco 3:** FinanceiroPY
+- [ ] Clustering de despesas com dados reais (aplica Semana 5)
+- [ ] Categorização automática com LLM
+- [ ] Previsão de gastos e recomendações inteligentes
+
+**💡 Aplicação:** Gestão financeira pessoal com IA real
+
+---
+
+### 📋 **Bloco 4:** Ferroviário + IA *(diferenciador único de mercado)*
+- [ ] Anomaly detection em dados reais FCA/FNS
+- [ ] Manutenção preditiva — conceitos e protótipo
+- [ ] Casos de uso específicos do setor ferroviário
+- [ ] Proposta de valor: expertise ferroviária + IA
+
+**💡 Aplicação:** FCA/FNS + posicionamento internacional
 
 ## 🛡️ Protocolo v2.0 Integrado
 
@@ -318,11 +346,12 @@ Conforme necessidade dos projetos:
 ██████████ 100% Semana 2 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 4 - Consolidação ML ✅ CONCLUÍDA (1 Abr 2026)
-██████░░░░  67% Semana 5 - ML Não Supervisionado ▶️ EM ANDAMENTO (Dia 2/3 ✅ — 9 Abr 2026)
-░░░░░░░░░░   0% Semana 7-8 - Séries Temporais
-░░░░░░░░░░   0% Semana 9-10 - NLP Básico
-░░░░░░░░░░   0% Semana 11-12 - Projeto Financeiro
-░░░░░░░░░░   0% Semana 13-14 - Projeto Estoque
+██████████ 100% Semana 5 - ML Não Supervisionado ✅ CONCLUÍDA (29 Abr 2026)
+███░░░░░░░  33% Semana 6 - Deep Learning Fundamentos ▶️ EM ANDAMENTO (Dia 1 ✅)
+░░░░░░░░░░   0% Bloco 1 - LLM Integration + Novo Fluxo de Trabalho
+░░░░░░░░░░   0% Bloco 2 - BelgoEstoque AI
+░░░░░░░░░░   0% Bloco 3 - FinanceiroPY
+░░░░░░░░░░   0% Bloco 4 - Ferroviário + IA
 ```
 
 > ⏸️ **Pausa de ~3 meses** (Dez/2025 → Mar/2026): recesso de fim de ano + demanda de trabalho. Retomada em 18/03/2026 com revisão validada (8.5/9).

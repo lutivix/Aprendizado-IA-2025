@@ -33,12 +33,15 @@
   - PCA: 8→7 features para 95% variância, Silhouette PCA 2D: 0.4718 (+133% vs original)
   - Pipeline: PCA 2D → DBSCAN (2 clusters) + Isolation Forest (15 anomalias)
 
-### 💰 Dia 3: Projeto Prático — Segmentação Aplicada
-- [ ] Segmentação de despesas do projeto Financeiro
-- [ ] Pipeline completo: pré-processamento → clustering → interpretação
-- [ ] Visualizações profissionais dos clusters
-- [ ] Insights acionáveis a partir dos agrupamentos
-- [ ] Documentação dos resultados
+### 💰 Dia 3: Projeto Prático — Segmentação Aplicada ✅ CONCLUÍDO
+- [x] Segmentação de despesas do projeto Financeiro (banco SQLite real)
+- [x] Pipeline completo: pré-processamento → clustering → interpretação
+- [x] Comparação K-Means vs Agglomerative vs DBSCAN
+- [x] PCA 2D para visualização dos clusters
+- [x] Baseline supervisionado (LogReg + RandomForest) para validar features
+- [x] Cluster profiling (médias, taxa de estouro, categoria dominante)
+- [x] Nomeação automática de perfis + recomendações acionáveis
+- **Resultado:** Pipeline executado de ponta-a-ponta sobre dados reais (`lancamentos` + `weekly_budgets`); perfis nomeados (ex.: Pressionado, Equilibrado, Folgado) com recomendações específicas por cluster
 
 ## 🎓 O que Você Já Domina (Recap Semanas 1-4)
 
@@ -77,8 +80,10 @@ semana-05-ml-nao-supervisionado/
 ```
 ██████████ 100% Dia 1 - Clustering Fundamentos  ✅ CONCLUÍDO (8 Abr)
 ██████████ 100% Dia 2 - DBSCAN + Anomalias       ✅ CONCLUÍDO (9 Abr)
-░░░░░░░░░░   0% Dia 3 - Segmentação Aplicada
+██████████ 100% Dia 3 - Segmentação Aplicada     ✅ CONCLUÍDO (29 Abr)
 ```
+
+**🎉 Semana 5 100% concluída!** Próximo passo: [Semana 6 — Deep Learning Intro](../semana-06-deep-learning/README.md)
 
 ## 💡 Por que ML Não Supervisionado?
 

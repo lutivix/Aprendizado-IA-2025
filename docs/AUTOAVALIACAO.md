@@ -342,6 +342,40 @@ Se você consegue:
 
 ---
 
+#### Dia 3: Projeto Prático — Segmentação Financeira
+**Conceitos-chave:**
+- [ ] Sei conectar a um banco SQLite real e extrair tabelas com pandas
+- [ ] Entendo como agregar transações por semana/categoria/pessoa
+- [ ] Sei comparar K-Means, Agglomerative e DBSCAN no mesmo dataset
+- [ ] Entendo o papel do PCA 2D para *visualizar* (não necessariamente para treinar)
+- [ ] Consigo nomear clusters com base em perfil de negócio (não só número)
+- [ ] Entendo que clustering acompanhado de baseline supervisionado dá mais credibilidade
+
+**Habilidades práticas:**
+- [ ] Carrego dados reais e trato valores faltantes/normalizo categorias
+- [ ] Construo um `ColumnTransformer` com pipelines numérico e categórico
+- [ ] Escolho K com base em silhouette score em uma faixa (2–7)
+- [ ] Gero perfil de cluster (média das features + categoria dominante + taxa de estouro)
+- [ ] Mapeio cada cluster para uma recomendação acionável
+
+**Quando avançar para a Semana 6:**
+Se você consegue:
+- Pegar um banco real e produzir clusters interpretáveis em um único notebook
+- Justificar suas escolhas (escala, K, algoritmo) com métricas
+- Explicar o resultado em linguagem de negócio (não só técnica)
+
+---
+
+### Semana 5 → Semana 6:
+- [ ] Apliquei clustering em um dataset real (não apenas sintético)
+- [ ] Sei escolher entre K-Means, DBSCAN e Agglomerative com critério
+- [ ] Comparei métricas (silhouette, inertia) e interpretei diferenças
+- [ ] Detectei anomalias com pelo menos um método (IF, LOF ou DBSCAN noise)
+- [ ] Combinei clustering com PCA para visualização
+- [ ] Sei que toda essa família ainda é ML "clássico" — próximo passo é Deep Learning
+
+---
+
 ## 🎯 Sua Auto-Avaliação Semanal
 
 ### 📝 Template de Reflexão (preencha no fim de cada semana):

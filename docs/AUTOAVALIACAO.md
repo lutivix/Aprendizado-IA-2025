@@ -376,6 +376,34 @@ Se você consegue:
 
 ---
 
+## 🧠 Semana 6 - Deep Learning Fundamentos
+
+### Dia 1: Fundamentos + Primeira NN com Keras ✅
+- [x] Entendo neurônio artificial: $z = w \cdot x + b$, ativação não-linear
+- [x] Sei o papel de ReLU, sigmoid e softmax
+- [x] Compreendo forward pass, loss e backpropagation (intuição + gradiente)
+- [x] Construí minha primeira NN com Keras Sequential
+- [x] Sei quando DL faz sentido vs ML clássico (volume + complexidade + dados não-tabulares)
+
+### Dia 2: NN aplicada — Forecasting BelgoEstoque ✅
+- [x] Apliquei NN em problema **real de produto** (previsão de demanda)
+- [x] Fiz **split temporal** corretamente (sem shuffle, corte por data)
+- [x] Engenharia de features temporais: lags, médias móveis, ciclos sin/cos
+- [x] Comparei NN vs XGBoost com **mesmas features** e mesmo split
+- [x] Métricas de regressão: MAE, RMSE, sMAPE, **bias** (não só média)
+- [x] Olhei a **distribuição do erro** (mediana, p90, max), não só agregado
+- [x] Entendo que XGBoost dá feature importance de graça; NN exige SHAP/LIME
+- [x] Apliquei a **matriz de decisão de 5 critérios** (ganho, estabilidade, ops, interpretabilidade, infra)
+- [x] Decisão fundamentada para Fase 4 do BelgoEstoque: **XGBoost**, não NN
+- [x] Sei reconhecer **quando NN realmente vence**: alto volume + correlação entre séries + multi-step + DL infra
+
+### Semana 6 → Pivô Estratégico:
+- [ ] Tenho clareza sobre o porquê de DL não ser sempre a resposta
+- [ ] Estou pronto para a ponte: embeddings → Transformers → LLMs
+- [ ] Próximo bloco da carreira é **aplicação prática com LLMs** em produtos reais
+
+---
+
 ## 🎯 Sua Auto-Avaliação Semanal
 
 ### 📝 Template de Reflexão (preencha no fim de cada semana):

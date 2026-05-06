@@ -253,7 +253,7 @@ Aprendizado-IA-2025/
 
 ### ⏳ **Semana 6 (Abr-Mai 2026):** Deep Learning Intro - **EM ANDAMENTO**
 **Foco:** Redes neurais do zero, Keras/TensorFlow, primeira NN treinada  
-**Docs:** [Dia 1](docs/23-dia1-semana6-deep-learning-intro.md) • [README](semana-06-deep-learning/README.md)
+**Docs:** [Dia 1](docs/23-dia1-semana6-deep-learning-intro.md) • [Dia 2](docs/24-dia2-semana6-nn-belgoestoque.md) • [README](semana-06-deep-learning/README.md)
 
 **Dia 1:** Fundamentos de Deep Learning ✅ CONCLUÍDO
 - [x] Diferença entre ML clássico e Deep Learning
@@ -263,10 +263,11 @@ Aprendizado-IA-2025/
 - [x] Primeira rede com Keras (Sequential) em dataset tabular
 - [x] Comparação NN vs RandomForest no mesmo problema
 
-**Dia 2:** NN na prática — BelgoEstoque *(a realizar)*
-- [ ] NN aplicada a previsão de demanda (contexto real de produto)
-- [ ] Comparação NN vs XGBoost no mesmo problema
-- [ ] Decisão fundamentada: quando DL vale, quando ML clássico vence
+**Dia 2:** NN na prática — BelgoEstoque ✅ CONCLUÍDO (6 Mai)
+- [x] NN aplicada a previsão de demanda (3 SKUs sintéticos com sazonalidade real)
+- [x] Comparação NN vs XGBoost com mesmo conjunto de features e split temporal
+- [x] Métricas: MAE, RMSE, sMAPE, bias, tempo de treino, interpretabilidade
+- [x] Matriz de decisão aplicada → conclusão: **XGBoost para Fase 4** (NN não paga o custo no contexto atual)
 
 **Dia 3:** Ponte para LLMs *(a realizar)*
 - [ ] Como o aprendizado de 6 semanas conecta com GPT/Claude
@@ -347,7 +348,7 @@ Aprendizado-IA-2025/
 ██████████ 100% Semana 3 - CONCLUÍDA ✅ (3 dias produtivos)
 ██████████ 100% Semana 4 - Consolidação ML ✅ CONCLUÍDA (1 Abr 2026)
 ██████████ 100% Semana 5 - ML Não Supervisionado ✅ CONCLUÍDA (29 Abr 2026)
-███░░░░░░░  33% Semana 6 - Deep Learning Fundamentos ▶️ EM ANDAMENTO (Dia 1 ✅)
+██████░░░░  67% Semana 6 - Deep Learning Fundamentos ▶️ EM ANDAMENTO (Dia 2 ✅ — 6 Mai 2026)
 ░░░░░░░░░░   0% Bloco 1 - LLM Integration + Novo Fluxo de Trabalho
 ░░░░░░░░░░   0% Bloco 2 - BelgoEstoque AI
 ░░░░░░░░░░   0% Bloco 3 - FinanceiroPY

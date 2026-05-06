@@ -19,11 +19,13 @@
 - [x] Primeira rede com Keras em dataset tabular
 - [x] Comparação NN vs RandomForest no mesmo problema
 
-### 🛠️ Dia 2: NN na prática — BelgoEstoque
-- [ ] NN aplicada a previsão de demanda (contexto real de produto)
-- [ ] Comparação NN vs XGBoost no mesmo problema
-- [ ] Decisão fundamentada: quando DL vale, quando ML clássico vence
-- [ ] Primeiros passos do pipeline BelgoEstoque Fase 4
+### 🛠️ Dia 2: NN na prática — BelgoEstoque ⏳ EM ANDAMENTO
+- [x] Dataset sintético realista de demanda (3 SKUs, 3 anos, sazonalidade + promo + ruído)
+- [x] Feature engineering temporal (lags, médias móveis, ciclos sin/cos)
+- [x] Split temporal correto (sem shuffle)
+- [x] Comparação NN vs XGBoost com mesmas features
+- [x] Métricas honestas (MAE, RMSE, sMAPE, bias) + tempo + interpretabilidade
+- [x] Matriz de decisão aplicada → conclusão fundamentada para Fase 4
 
 ### 💡 Dia 3: Ponte para LLMs
 - [ ] Como o aprendizado de 6 semanas conecta com GPT/Claude
@@ -45,22 +47,24 @@
 
 ```
 semana-06-deep-learning/
-├── README.md                            # Este arquivo
+├── README.md                                # Este arquivo
 └── notebooks/
-    └── 01-deep-learning-intro.ipynb     # Fundamentos + primeira NN
+    ├── 01-deep-learning-intro.ipynb         # Fundamentos + primeira NN
+    └── 02-nn-belgoestoque-demanda.ipynb     # NN vs XGBoost em previsão de demanda
 ```
 
 ## 📈 Progresso
 
 ```
 ██████████ 100% Dia 1 - Fundamentos + Primeira NN ✅ CONCLUÍDO
-░░░░░░░░░░   0% Dia 2 - NN na prática — BelgoEstoque
+██████████ 100% Dia 2 - NN na prática — BelgoEstoque ✅ CONCLUÍDO (6 Mai)
 ░░░░░░░░░░   0% Dia 3 - Ponte para LLMs
 ```
 
 ## 📚 Documentação
 
 - [Dia 1 — Deep Learning Intro](../docs/23-dia1-semana6-deep-learning-intro.md)
+- [Dia 2 — NN na prática BelgoEstoque](../docs/24-dia2-semana6-nn-belgoestoque.md)
 - [AUTOAVALIACAO geral](../docs/AUTOAVALIACAO.md)
 
 ## 💡 Por que passar por Deep Learning?

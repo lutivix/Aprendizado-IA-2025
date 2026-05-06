@@ -3,21 +3,21 @@
 ## 📋 Visão Geral
 
 **Período:** Abril–Maio 2026  
-**Foco Principal:** 🧠 **REDES NEURAIS DO ZERO**  
-**Filosofia:** Entender o que uma NN faz por dentro antes de empilhar arquiteturas modernas
+**Foco Principal:** 🧠 **FUNDAMENTOS DE DL — BASE PARA LLMS**  
+**Filosofia:** Entender o que uma NN faz por dentro para depois trabalhar com LLMs de forma consciente
 
-> Até aqui dominamos ML clássico (sup + unsup). A Semana 6 abre a porta para os modelos que dominam visão, NLP e geração: **redes neurais profundas**.
+> Até aqui dominamos ML clássico (sup + unsup). A Semana 6 fecha o ciclo de teoria e abre a ponte para a Fase 2: LLM Integration e aplicação nos produtos reais.
 
 ## 🎯 Objetivos da Semana
 
 ### 📚 Dia 1: Fundamentos + Primeira NN com Keras ✅ CONCLUÍDO
-- [ ] Diferença entre ML clássico e Deep Learning
-- [ ] Anatomia: neurônio, camada densa, função de ativação
-- [ ] Forward pass, loss, backpropagation (intuição)
-- [ ] Otimizadores (SGD, Adam) + learning rate
-- [ ] Regularização: Dropout, BatchNorm, Early Stopping
-- [ ] Primeira rede com Keras em dataset tabular
-- [ ] Comparação NN vs RandomForest no mesmo problema
+- [x] Diferença entre ML clássico e Deep Learning
+- [x] Anatomia: neurônio, camada densa, função de ativação
+- [x] Forward pass, loss, backpropagation (intuição)
+- [x] Otimizadores (SGD, Adam) + learning rate
+- [x] Regularização: Dropout, BatchNorm, Early Stopping
+- [x] Primeira rede com Keras em dataset tabular
+- [x] Comparação NN vs RandomForest no mesmo problema
 
 ### 🛠️ Dia 2: NN na prática — BelgoEstoque
 - [ ] NN aplicada a previsão de demanda (contexto real de produto)
@@ -63,13 +63,13 @@ semana-06-deep-learning/
 - [Dia 1 — Deep Learning Intro](../docs/23-dia1-semana6-deep-learning-intro.md)
 - [AUTOAVALIACAO geral](../docs/AUTOAVALIACAO.md)
 
-## 💡 Por que Deep Learning?
+## 💡 Por que passar por Deep Learning?
 
-**Casos de uso reais para os projetos pessoais:**
-- 🧾 **Classificação de notas fiscais** (visão computacional + OCR)
-- 💬 **Categorização automática** de transações por descrição (NLP)
-- 📈 **Forecasting** financeiro com redes recorrentes/Transformers
-- 🚨 **Anomalias complexas** com autoencoders
+**DL aqui não é o destino — é a ponte:**
+- 🧠 **Entender LLMs** (GPT, Claude) requer saber o que são camadas, atenção, embeddings
+- 🔗 **BelgoEstoque Fase 4** pode usar NN para previsão de demanda (Dia 2 decide se vale)
+- 📐 **Vocabulário técnico** para conversar com engenheiros de IA e avaliar soluções
+- 🚀 **Fase 2 (LLM Integration)** começa aqui — Dia 3 faz a ponte explícita
 
 > ⚠️ **Lembrete honesto:** para tabular pequeno (como o `lancamentos` atual), XGBoost ainda costuma vencer NN. Use Deep Learning quando o problema realmente pede.
 
